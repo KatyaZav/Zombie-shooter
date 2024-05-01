@@ -2320,7 +2320,7 @@ GameObject:
   - component: {fileID: 1572738806}
   - component: {fileID: 1572738805}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Weapon target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2341,6 +2341,7 @@ MonoBehaviour:
   _cartridges: 5
   _rechargeTime: 1
   _cartridge: {fileID: 3490752798063905953, guid: cddbcd950c6f07640a5c9f1ca10399f6, type: 3}
+  _cartridgeText: {fileID: 1865479115}
 --- !u!114 &1572738806
 MonoBehaviour:
   m_ObjectHideFlags: 0

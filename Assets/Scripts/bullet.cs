@@ -7,6 +7,6 @@ public class bullet : MonoBehaviour
 
     void Start()
     {
-        _rb.AddForce(Vector3.forward*_speed, ForceMode.VelocityChange);
+        _rb.AddForce(Vector3.forward*_speed*2, ForceMode.VelocityChange);
     }
 }
