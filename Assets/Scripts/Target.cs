@@ -23,15 +23,30 @@ public class Target : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var mouse = Input.mousePosition;
-        mouse.z = _camera.nearClipPlane;
-        var vec = _camera.ScreenToWorldPoint(mouse);
-        //vec.z = -5f;
+        var vec = GetMouseWorldPosition();
+
         transform.position = vec;
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && CheckIsInRightPlace())
         {
             _weapon.Shoot();
         }
+    }
+
+    Vector3 GetMouseWorldPosition()
+    {
+        var mouse = Input.mousePosition;
+        mouse.z = _camera.nearClipPlane;
+        return _camera.ScreenToWorldPoint(mouse);
+    }
+
+    bool CheckIsInRightPlace()
+    {
+        var vec = GetMouseWorldPosition();
+
+        if (vec.y >= -3.2f && vec.y <= 3.5f)
+            return true;
+        else
+            return false;
     }
 }
