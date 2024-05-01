@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Weapon : MonoBehaviour
@@ -7,11 +5,13 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField] protected int _cartridges;
     [SerializeField] protected float _rechargeTime;
 
+    [SerializeField] protected GameObject _cartridge;
+
     private bool _canAttack = true;
     private int _currentCartridges;
 
     public virtual void Init() { }
-    public void Attack() 
+    public void Shoot() 
     {
         if (_canAttack == false)
             return;
