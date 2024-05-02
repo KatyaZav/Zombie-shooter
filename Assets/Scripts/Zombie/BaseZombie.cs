@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 using UnityEngine.UI;
 
 public abstract class BaseZombie : MonoBehaviour
@@ -7,14 +7,24 @@ public abstract class BaseZombie : MonoBehaviour
     [SerializeField] float _health;
 
     [SerializeField] protected float _deathCost;
+    [SerializeField] protected float _speed;
 
     public virtual void Init() 
     {
         _hpSlider.maxValue = _health;
     }
-    protected virtual void Move() {}
+    protected virtual void Move() 
+    {
+        transform.Translate(transform.forward * Time.deltaTime * _speed * -1);
+    }
+
     protected virtual void Attack() {}
     protected virtual void OnDead() {}
+
+    private void FixedUpdate()
+    {
+        Move();
+    }
 
     void RemoveHp(float hp) 
     {
