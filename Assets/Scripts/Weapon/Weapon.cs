@@ -5,6 +5,7 @@ public abstract class Weapon : MonoBehaviour
 {
     [SerializeField] protected int _cartridges;
     [SerializeField] protected float _rechargeTime;
+    [SerializeField] SliderTimer _timer;
 
     [SerializeField] protected GameObject _cartridge;
 
@@ -16,6 +17,7 @@ public abstract class Weapon : MonoBehaviour
     public virtual void Init() 
     {
         UpdateCartridge();
+        _timer.SetTime(_rechargeTime);
     }
     public void Shoot() 
     {
@@ -31,6 +33,7 @@ public abstract class Weapon : MonoBehaviour
         
         if (_currentCartridges <= 0)
         {
+            _timer.gameObject.SetActive(true);
             _canAttack = false;
             Invoke("Recharge", _rechargeTime);
         }
