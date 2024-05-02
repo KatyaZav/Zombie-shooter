@@ -24,9 +24,14 @@ public class SliderTimer : MonoBehaviour
     {
         while (_currentTimer >= 0)
         {
-            _image.fillAmount = _currentTimer/_timer;
-            _currentTimer--;
-            yield return new WaitForSeconds(1);
+           /* yield return new WaitForSeconds(1);
+            _image.fillAmount = Mathf.Lerp(_image.fillAmount, (_currentTimer-1)/_timer, 1);
+            _currentTimer--;*/
+            
+            _currentTimer -= Time.deltaTime;
+            float normalizedTime = Mathf.Clamp01(_currentTimer / _timer);
+            _image.fillAmount = normalizedTime;
+            yield return new WaitForFixedUpdate();
         }
 
         gameObject.SetActive(false);

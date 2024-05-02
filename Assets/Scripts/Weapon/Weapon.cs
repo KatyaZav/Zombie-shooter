@@ -16,6 +16,7 @@ public abstract class Weapon : MonoBehaviour
 
     public virtual void Init() 
     {
+        _currentCartridges = _cartridges;
         UpdateCartridge();
         _timer.SetTime(_rechargeTime);
     }

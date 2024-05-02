@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Bostrap : MonoBehaviour
 {
+    [SerializeField] BaseAbility[] _abilities;
+    [SerializeField] Weapon _weapon;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+        foreach (var e in _abilities)
+            e.Init();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _weapon.Init();
     }
 }
