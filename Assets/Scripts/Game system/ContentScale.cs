@@ -8,7 +8,7 @@ public class ContentScale : MonoBehaviour
     [SerializeField] Transform _fg;
 
     [SerializeField] float minValue = 0.2f;
-    [SerializeField] float maxValue = 2;
+    [SerializeField] float maxValue = 1.5f;
 
     public float GetScale(Transform obj)
     {

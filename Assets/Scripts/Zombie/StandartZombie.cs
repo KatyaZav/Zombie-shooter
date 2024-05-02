@@ -7,7 +7,5 @@ public class StandartZombie : BaseZombie
     public override void Init()
     {
         base.Init();
-
-        _speed = 5;
     }
 }
