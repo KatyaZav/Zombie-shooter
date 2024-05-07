@@ -1,13 +1,17 @@
- using UnityEngine;
+using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public abstract class BaseZombie : MonoBehaviour
 {
     [SerializeField] Slider _hpSlider;
     [SerializeField] float _health;
+    [SerializeField] int _damage = 1;
 
-    [SerializeField] protected float _deathCost;
+    [SerializeField] protected int _deathCost;
     [SerializeField] protected float _speed;
+
+    public static Action<int> ZombieKilledEvent;
 
     public virtual void Init() 
     {
@@ -18,8 +22,15 @@ public abstract class BaseZombie : MonoBehaviour
         transform.Translate(transform.forward * Time.deltaTime * _speed * -1);
     }
 
-    protected virtual void Attack() {}
-    protected virtual void OnDead() {}
+    public virtual void Attack(PlayerInventory inventory) 
+    {
+        inventory.Hit(_damage);
+        Destroy(gameObject);
+    }
+    protected virtual void OnDead() 
+    {
+        ZombieKilledEvent?.Invoke(_deathCost);
+    }
 
     private void FixedUpdate()
     {
