@@ -4,18 +4,20 @@ using UnityEngine.UI;
 
 public abstract class BaseZombie : MonoBehaviour
 {
-    [SerializeField] Slider _hpSlider;
+    [SerializeField] HPBar _hpSlider;
     [SerializeField] float _health;
     [SerializeField] int _damage = 1;
 
-    [SerializeField] protected int _deathCost;
-    [SerializeField] protected float _speed;
+    [SerializeField] protected int _deathCost = 1;
+    [SerializeField] protected float _speed = 1;
 
     public static Action<int> ZombieKilledEvent;
 
+    bool _isDead = false;
+
     public virtual void Init() 
     {
-        _hpSlider.maxValue = _health;
+        _hpSlider.Init(_health);
     }
     protected virtual void Move() 
     {
@@ -30,19 +32,24 @@ public abstract class BaseZombie : MonoBehaviour
     protected virtual void OnDead() 
     {
         ZombieKilledEvent?.Invoke(_deathCost);
+        _hpSlider.Deactivate();
+        _isDead = true;
     }
 
     private void FixedUpdate()
     {
+        if (_isDead == true)
+            return;
+
         Move();
     }
 
-    void RemoveHp(float hp) 
+    protected void RemoveHp(float hp) 
     {
         _health -= hp;
-        _hpSlider.value = _health;
+        _hpSlider.UpdateSlider(_health);
 
-        if (_health <= 0)
+        if (_health <= 0 && _isDead == false)
             OnDead();
     }
 }
