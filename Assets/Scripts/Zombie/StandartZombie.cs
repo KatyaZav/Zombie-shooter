@@ -5,6 +5,7 @@ using UnityEngine;
 public class StandartZombie : BaseZombie
 {
     [SerializeField] ZombiePart[] _parts;
+    [SerializeField] BaseItems[] _items;
 
     public override void Init()
     {
@@ -13,6 +14,11 @@ public class StandartZombie : BaseZombie
         foreach (var e in _parts)
         {
             e.DamagePartEvent += RemoveHp;
+        }
+
+        foreach (var e in _items)
+        {
+            e.Activate();
         }
     }
 
