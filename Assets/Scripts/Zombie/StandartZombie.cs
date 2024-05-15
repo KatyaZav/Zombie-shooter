@@ -18,7 +18,8 @@ public class StandartZombie : BaseZombie
 
         foreach (var e in _items)
         {
-            e.Activate();
+            if(e.CheckProbability())
+                e.Activate();
         }
     }
 

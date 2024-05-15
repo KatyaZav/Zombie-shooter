@@ -1421,6 +1421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 20
+  _probability: 15
   _zombie: {fileID: 343723285}
 --- !u!1 &492878986
 GameObject:
@@ -1641,6 +1642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 10
+  _probability: 10
   _zombie: {fileID: 343723285}
 --- !u!65 &558132055
 BoxCollider:
@@ -2222,6 +2224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 50
+  _probability: 15
   _zombie: {fileID: 343723285}
 --- !u!1 &924086175
 GameObject:
@@ -2393,8 +2396,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -23.07, y: 0}
-  m_SizeDelta: {x: 53.86, y: 100}
+  m_AnchoredPosition: {x: -23.07, y: 4.18}
+  m_SizeDelta: {x: 53.86, y: 91.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &933714681
 MonoBehaviour:
@@ -3088,6 +3091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 20
+  _probability: 15
   _zombie: {fileID: 343723285}
 --- !u!1 &1186558348
 GameObject:
@@ -3188,6 +3192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 5
+  _probability: 30
   _zombie: {fileID: 343723285}
 --- !u!65 &1186558352
 BoxCollider:
@@ -5221,8 +5226,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 25.000006, y: 0}
-  m_SizeDelta: {x: 50, y: 100}
+  m_AnchoredPosition: {x: 25.000006, y: 4.18}
+  m_SizeDelta: {x: 50, y: 91.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2006847670
 MonoBehaviour:
@@ -5642,6 +5647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 10
+  _probability: 10
   _zombie: {fileID: 343723285}
 --- !u!65 &2141139376
 BoxCollider:
