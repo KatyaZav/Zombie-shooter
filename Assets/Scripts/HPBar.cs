@@ -18,12 +18,12 @@ public class HPBar : MonoBehaviour
     {
         _maxHealth = health;
         _sliderMax = _hpSlider.transform.localScale.x;
+        _hpSlider.SetActive(true);
     }
 
     public void UpdateSlider(float health)
     {
-        if (_hpSlider.activeSelf == false)
-            _hpSlider.SetActive(true);
+        //if (_hpSlider.activeSelf == false)
 
         _hpSlider.transform.localScale = new Vector3(_sliderMax * health / _maxHealth, transform.localScale.y, transform.localScale.z);
     }
