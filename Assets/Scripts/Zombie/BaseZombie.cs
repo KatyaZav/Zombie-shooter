@@ -11,6 +11,8 @@ public abstract class BaseZombie : MonoBehaviour
     [SerializeField] protected int _deathCost = 1;
     [SerializeField] protected float _speed = 1;
 
+    bool _wasAttacked = false;
+
     public static Action<int> ZombieKilledEvent;
 
     bool _isDead = false;
@@ -19,6 +21,18 @@ public abstract class BaseZombie : MonoBehaviour
     {
         _hpSlider.Init(_health);
     }
+
+    public void AddDamage(int count = 1)
+    {
+        _damage += count;
+        Debug.Log(_damage);
+    }
+
+    public void ChangeSpeed(int pr)
+    {
+        _speed = _speed * (pr / 100f);
+    }
+
     protected virtual void Move() 
     {
         transform.Translate(transform.forward * Time.deltaTime * _speed * -1);
@@ -26,6 +40,10 @@ public abstract class BaseZombie : MonoBehaviour
 
     public virtual void Attack(PlayerInventory inventory) 
     {
+        if (_wasAttacked == true)
+            return;
+
+        _wasAttacked = true;
         inventory.Hit(_damage);
         Destroy(gameObject);
     }

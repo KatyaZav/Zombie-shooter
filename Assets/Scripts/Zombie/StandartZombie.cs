@@ -22,6 +22,7 @@ public class StandartZombie : BaseZombie
                 e.Activate();
         }
     }
+       
 
     private void OnEnable()
     {
