@@ -13,19 +13,19 @@ public abstract class BaseZombie : MonoBehaviour
 
     bool _wasAttacked = false;
 
-    public static Action<int> ZombieKilledEvent;
+    public static Action<int, BaseZombie> ZombieKilledEvent;
 
     bool _isDead = false;
 
-    public virtual void Init() 
+    public virtual void Init(Vector3 pos) 
     {
         _hpSlider.Init(_health);
+        gameObject.transform.localPosition = pos;
     }
 
     public void AddDamage(int count = 1)
     {
         _damage += count;
-        Debug.Log(_damage);
     }
 
     public void ChangeSpeed(int pr)
@@ -49,9 +49,11 @@ public abstract class BaseZombie : MonoBehaviour
     }
     protected virtual void OnDead() 
     {
-        ZombieKilledEvent?.Invoke(_deathCost);
+        ZombieKilledEvent?.Invoke(_deathCost, this);
         _hpSlider.Deactivate();
         _isDead = true;
+        gameObject.SetActive(false);
+        gameObject.transform.localPosition = Vector3.zero;
     }
 
     private void FixedUpdate()

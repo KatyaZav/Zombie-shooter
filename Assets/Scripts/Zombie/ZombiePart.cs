@@ -17,7 +17,7 @@ public class ZombiePart : MonoBehaviour
             //Debug.Log("Destroy  bulet");
             Destroy(other.gameObject);
 
-            DamagePartEvent?.Invoke(_damageCoefficient);
+            DamagePartEvent?.Invoke(_damageCoefficient * PlayerInventory.Damage);
         }        
     }
 }

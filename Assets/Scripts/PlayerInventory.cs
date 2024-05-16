@@ -9,6 +9,9 @@ public class PlayerInventory : MonoBehaviour
     private int _hp;
     private int _points;
 
+    private static int _damage = 10;
+    public static int Damage { get => _damage; }
+
     public void Init()
     {
         UpdateHealth();
@@ -39,7 +42,7 @@ public class PlayerInventory : MonoBehaviour
         BaseZombie.ZombieKilledEvent -= AddPoints;        
     }
 
-    private void AddPoints(int po)
+    private void AddPoints(int po, BaseZombie zombie)
     {
         _points += po;
         UpdatePoints();

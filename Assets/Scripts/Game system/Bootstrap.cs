@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bostrap : MonoBehaviour
+public class Bootstrap : MonoBehaviour
 {
     [SerializeField] BaseAbility[] _abilities;
     [SerializeField] Weapon _weapon;
     [SerializeField] PlayerInventory _inventory;
+    [SerializeField] Spawner _spawner;
 
     // Start is called before the first frame update
     void Start()
@@ -16,5 +17,6 @@ public class Bostrap : MonoBehaviour
 
         _weapon.Init();
         _inventory.Init();
+        _spawner.Init();
     }
 }

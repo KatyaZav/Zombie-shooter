@@ -7,9 +7,9 @@ public class StandartZombie : BaseZombie
     [SerializeField] ZombiePart[] _parts;
     [SerializeField] BaseItems[] _items;
 
-    public override void Init()
+    public override void Init(Vector3 pos)
     {
-        base.Init();
+        base.Init(pos);
 
         foreach (var e in _parts)
         {
@@ -21,11 +21,7 @@ public class StandartZombie : BaseZombie
             if(e.CheckProbability())
                 e.Activate();
         }
-    }
-       
 
-    private void OnEnable()
-    {
-        Init();
+        //gameObject.transform.localPosition = pos;
     }
 }
