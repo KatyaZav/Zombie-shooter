@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6497826178126261901}
   - component: {fileID: 3906901646784882955}
   - component: {fileID: 7468135575980909799}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 6929122772237726497}
   - component: {fileID: 7910647274890219566}
   - component: {fileID: 724553104891433262}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 3900527562090032446}
   - component: {fileID: 663986277744703973}
   - component: {fileID: 5579574975436293116}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 8954215435036971532}
   - component: {fileID: 7648753409598806519}
   - component: {fileID: 4257036860801641631}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: eye_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,7 +446,7 @@ GameObject:
   - component: {fileID: 5653481386575327241}
   - component: {fileID: 8703054773803110495}
   - component: {fileID: 7271462323519008289}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bucket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -567,7 +567,7 @@ GameObject:
   - component: {fileID: 4558975122423737341}
   - component: {fileID: 4189176841890152780}
   - component: {fileID: 6927711379356091441}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -635,7 +635,7 @@ GameObject:
   - component: {fileID: 3221923679684807281}
   - component: {fileID: 4028213696864567677}
   - component: {fileID: 6261103178035285049}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: leg_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -755,7 +755,7 @@ GameObject:
   - component: {fileID: 7289309503096158902}
   - component: {fileID: 7199937719551103537}
   - component: {fileID: 5175361103481655235}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: sword (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -875,7 +875,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8078504101989529821}
   - component: {fileID: 2525127146408475343}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -961,7 +961,7 @@ GameObject:
   - component: {fileID: 8640124485865960370}
   - component: {fileID: 6947335196734139374}
   - component: {fileID: 7838098030059684077}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: head_up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1081,7 +1081,7 @@ GameObject:
   - component: {fileID: 3200431152543660535}
   - component: {fileID: 4703623506024852222}
   - component: {fileID: 6615374857162613968}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: leg_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1201,7 +1201,7 @@ GameObject:
   - component: {fileID: 4191260707558096349}
   - component: {fileID: 2682850537004544720}
   - component: {fileID: 1451203584034110760}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: right arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1322,7 +1322,7 @@ GameObject:
   - component: {fileID: 3159997252613084003}
   - component: {fileID: 1614974628415631467}
   - component: {fileID: 3169511900542328486}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: zombie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1459,7 +1459,7 @@ GameObject:
   - component: {fileID: 8118917016336573891}
   - component: {fileID: 5918844612082476067}
   - component: {fileID: 8642819519201545}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1558,7 +1558,7 @@ GameObject:
   - component: {fileID: 3566707678260244424}
   - component: {fileID: 4459011759412310159}
   - component: {fileID: 47888996732354416}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: sheld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1680,7 +1680,7 @@ GameObject:
   - component: {fileID: 9014600958854039795}
   - component: {fileID: 6055167705793600814}
   - component: {fileID: 4336232195363088131}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1806,7 +1806,7 @@ GameObject:
   - component: {fileID: 4948973380928383782}
   - component: {fileID: 6069650696115900468}
   - component: {fileID: 8214817411766440323}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: eye_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1928,7 +1928,7 @@ GameObject:
   - component: {fileID: 181642830863268745}
   - component: {fileID: 4499660909235483669}
   - component: {fileID: 8480205076435877351}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: left arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
