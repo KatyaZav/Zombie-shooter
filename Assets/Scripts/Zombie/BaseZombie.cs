@@ -20,6 +20,7 @@ public abstract class BaseZombie : MonoBehaviour
     public virtual void Init(Vector3 pos) 
     {
         _hpSlider.Init(_health);
+        gameObject.SetActive(true);
         gameObject.transform.localPosition = pos;
         gameObject.transform.localScale = Vector3.zero;
     }

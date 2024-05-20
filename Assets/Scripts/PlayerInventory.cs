@@ -29,7 +29,7 @@ public class PlayerInventory : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var zombie = other.gameObject.GetComponentInParent<BaseZombie>();
-        Debug.Log(zombie);
+        //Debug.Log(zombie);
 
         if (zombie != null)
         {
