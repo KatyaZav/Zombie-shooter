@@ -21,6 +21,7 @@ public abstract class BaseZombie : MonoBehaviour
     {
         _hpSlider.Init(_health);
         gameObject.transform.localPosition = pos;
+        gameObject.transform.localScale = Vector3.zero;
     }
 
     public void AddDamage(int count = 1)

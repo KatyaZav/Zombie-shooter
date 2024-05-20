@@ -10,7 +10,7 @@ public class ZombiePool : MonoBehaviour
     public BaseZombie GetZombie()
     {
         BaseZombie zombie;
-        Debug.Log(_zombies.Count);
+        //Debug.Log(_zombies.Count);
 
         if (_zombies.TryDequeue(out zombie))
         {
@@ -27,6 +27,9 @@ public class ZombiePool : MonoBehaviour
     public void ReturnZombie(BaseZombie zombie)
     {
         Debug.Log("return");
+
+        Debug.Log("Before adding zombie" + _zombies.Count);
         _zombies.Enqueue(zombie);
+        Debug.Log("After adding zombie" + _zombies.Count);
     }
 }
