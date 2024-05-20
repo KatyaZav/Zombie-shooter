@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] List<BaseZombie> _zombies;
+    [SerializeField] List<BaseZombie> _zombies = new List<BaseZombie>();
     [SerializeField] Transform _left, _right, _bigSpawnZone, _smallSpawnZone;
     [SerializeField] GameObject _zombiePrefab;
 
