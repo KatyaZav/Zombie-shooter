@@ -5,13 +5,14 @@ using UnityEngine.UI;
 public abstract class BaseZombie : MonoBehaviour
 {
     [SerializeField] HPBar _hpSlider;
-    [SerializeField] float _health;
+    [SerializeField] float _maxHealth;
     [SerializeField] int _damage = 1;
 
     [SerializeField] protected int _deathCost = 1;
     [SerializeField] protected float _speed = 1;
 
     bool _wasAttacked = false;
+    float _health;
 
     public static Action<int, BaseZombie> ZombieKilledEvent;
 
@@ -19,10 +20,14 @@ public abstract class BaseZombie : MonoBehaviour
 
     public virtual void Init(Vector3 pos) 
     {
-        _hpSlider.Init(_health);
         gameObject.SetActive(true);
+
+        _isDead = false;
+        _health = _maxHealth;
         gameObject.transform.localPosition = pos;
         gameObject.transform.localScale = Vector3.zero;
+        
+        _hpSlider.Init(_health);
     }
 
     public void AddDamage(int count = 1)
@@ -47,7 +52,9 @@ public abstract class BaseZombie : MonoBehaviour
 
         _wasAttacked = true;
         inventory.Hit(_damage);
-        Destroy(gameObject);
+
+        ZombieKilledEvent?.Invoke(_deathCost, this);
+        gameObject.SetActive(false);
     }
     protected virtual void OnDead() 
     {

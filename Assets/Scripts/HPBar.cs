@@ -9,6 +9,8 @@ public class HPBar : MonoBehaviour
     float _maxHealth;
     float _sliderMax;
 
+    bool _isInit = false;
+    
     public void Deactivate()
     {
         _hpSlider.SetActive(false);
@@ -16,8 +18,13 @@ public class HPBar : MonoBehaviour
 
     public void Init(float health)
     {
+        if (_isInit == false)
+        {
+            _sliderMax = _hpSlider.transform.localScale.x;
+            _isInit = true;
+        }
+
         _maxHealth = health;
-        _sliderMax = _hpSlider.transform.localScale.x;
         _hpSlider.SetActive(true);
     }
 
@@ -25,6 +32,12 @@ public class HPBar : MonoBehaviour
     {
         //if (_hpSlider.activeSelf == false)
 
-        _hpSlider.transform.localScale = new Vector3(_sliderMax * health / _maxHealth, transform.localScale.y, transform.localScale.z);
+        if (health <= 0)
+        {
+            _hpSlider.transform.localScale = Vector3.zero;
+        }
+        else
+            _hpSlider.transform.localScale = 
+                new Vector3(_sliderMax * health / _maxHealth, transform.localScale.y, transform.localScale.z);
     }
 }

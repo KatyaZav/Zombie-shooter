@@ -6,14 +6,16 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] List<BaseZombie> _zombies;
     [SerializeField] Transform _left, _right, _bigSpawnZone, _smallSpawnZone;
-    [SerializeField] ZombiePool _zombiesPool;
+    [SerializeField] GameObject _zombiePrefab;
 
     [Range(1, 20), SerializeField] float _timeInSpawn; 
 
+    ObjectPool<BaseZombie> _zombiesPool;
 
     public void Init()
     {
         StartCoroutine(SpawnInTime());
+        _zombiesPool = new ObjectPool<BaseZombie>(_zombiePrefab);
 
         BaseZombie.ZombieKilledEvent += RemoveZombie;
     }
@@ -29,7 +31,7 @@ public class Spawner : MonoBehaviour
         {
             yield return new WaitForSeconds(_timeInSpawn);
 
-            var zombie = _zombiesPool.GetZombie();
+            var zombie = _zombiesPool.GetObject(this.transform);
             Vector3 vector = new Vector3(GenerateRandomXPosition(), 0, 0);
             zombie.Init(vector);
 
@@ -39,7 +41,7 @@ public class Spawner : MonoBehaviour
 
     void RemoveZombie(int i, BaseZombie zombie)
     {
-        _zombiesPool.ReturnZombie(zombie);
+        _zombiesPool.ReturnObject(zombie);
         _zombies.Remove(zombie);
     }
 
