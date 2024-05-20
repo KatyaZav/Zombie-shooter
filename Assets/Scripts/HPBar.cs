@@ -25,7 +25,6 @@ public class HPBar : MonoBehaviour
         }
 
         _maxHealth = health;
-        _hpSlider.SetActive(true);
     }
 
     public void UpdateSlider(float health)
@@ -37,7 +36,10 @@ public class HPBar : MonoBehaviour
             _hpSlider.transform.localScale = Vector3.zero;
         }
         else
+        {
+            _hpSlider.SetActive(true);
             _hpSlider.transform.localScale = 
                 new Vector3(_sliderMax * health / _maxHealth, transform.localScale.y, transform.localScale.z);
+        }
     }
 }

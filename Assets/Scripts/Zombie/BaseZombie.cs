@@ -27,6 +27,7 @@ public abstract class BaseZombie : MonoBehaviour
         gameObject.transform.localPosition = pos;
         gameObject.transform.localScale = Vector3.zero;
         
+        _hpSlider.Deactivate();
         _hpSlider.Init(_health);
     }
 

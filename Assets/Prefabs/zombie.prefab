@@ -1415,7 +1415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hpSlider: {fileID: 8642819519201545}
-  _maxHealth: 1
+  _maxHealth: 30
   _damage: 1
   _deathCost: 1
   _speed: 1
