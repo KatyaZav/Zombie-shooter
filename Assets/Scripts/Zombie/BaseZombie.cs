@@ -4,6 +4,12 @@ using UnityEngine.UI;
 
 public abstract class BaseZombie : MonoBehaviour
 {
+    [SerializeField] Gradient _gradient;
+    [SerializeField] SpriteRenderer[] _partsSprites;
+    [SerializeField, Range(0.8f, 1)] float _size; 
+
+    [Space(20)]
+
     [SerializeField] HPBar _hpSlider;
     [SerializeField] float _maxHealth;
     [SerializeField] int _damage = 1;
@@ -20,6 +26,8 @@ public abstract class BaseZombie : MonoBehaviour
 
     public virtual void Init(Vector3 pos) 
     {
+        ChangeColor();
+        ChangeSize();
         gameObject.SetActive(true);
 
         _isDead = false;
@@ -81,5 +89,20 @@ public abstract class BaseZombie : MonoBehaviour
 
         if (_health <= 0 && _isDead == false)
             OnDead();
+    }
+
+    private void ChangeColor()
+    {
+        var color = _gradient.Evaluate(UnityEngine.Random.Range(0f, 1f));
+
+        foreach (var e in _partsSprites)
+        {
+            e.color = color;
+        }
+    }
+    private void ChangeSize()
+    {
+        transform.localScale = new Vector3(1, UnityEngine.Random.Range(_size, 1), 1);
+
     }
 }

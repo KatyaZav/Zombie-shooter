@@ -3885,7 +3885,7 @@ MonoBehaviour:
   _bigSpawnZone: {fileID: 42871765}
   _smallSpawnZone: {fileID: 383536385}
   _zombiePrefab: {fileID: 6519604305117935832, guid: 1c52af593484a8643a7e22ff6486b16e, type: 3}
-  _timeInSpawn: 18.44
+  _timeInSpawn: 3.04
 --- !u!1 &1780833076
 GameObject:
   m_ObjectHideFlags: 0
