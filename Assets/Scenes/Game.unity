@@ -1121,7 +1121,7 @@ MonoBehaviour:
     rgba: 4280636394
   _button: {fileID: 295225491}
   _image: {fileID: 295225492}
-  _timeActive: 1
+  _timeActive: 5
   _timeRecharge: 5
   _timer: {fileID: 717706592}
 --- !u!1 &383536384

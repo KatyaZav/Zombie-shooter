@@ -13,6 +13,12 @@ public abstract class Weapon : MonoBehaviour
 
     private bool _canAttack = true;
     private int _currentCartridges;
+    private bool _isUnLimited;
+
+    public void MakeUnlimited(bool isTrue)
+    {
+        _isUnLimited = isTrue;
+    }
 
     public virtual void Init() 
     {
@@ -24,6 +30,12 @@ public abstract class Weapon : MonoBehaviour
     {
         if (_canAttack == false)
             return;
+
+        if (_isUnLimited)
+        {
+            OnAttack();
+            return;
+        }
 
         if (_currentCartridges > 0)
         {

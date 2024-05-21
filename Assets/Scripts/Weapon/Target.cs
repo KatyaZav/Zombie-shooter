@@ -7,6 +7,11 @@ public class Target : MonoBehaviour
 
     public static Target Instance;
 
+    public void MakeUnLimited(bool isUn)
+    {
+        _weapon.MakeUnlimited(isUn);
+    }
+
     private void Start()
     {
         Instance = this;
