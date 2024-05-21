@@ -2769,6 +2769,8 @@ MonoBehaviour:
   _timeActive: 1
   _timeRecharge: 5
   _timer: {fileID: 2085693793}
+  _spawner: {fileID: 1758722127}
+  _damage: 1
 --- !u!1 &1426161765
 GameObject:
   m_ObjectHideFlags: 0

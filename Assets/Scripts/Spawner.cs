@@ -18,6 +18,11 @@ public class Spawner : MonoBehaviour
             e.MakeStop(isTrue);
     }
 
+    public void PoisonAllZombies(float damage, float longTime, float perTime = 1f)
+    {
+        StartCoroutine(PoisonEffect(damage, longTime, perTime));
+    }
+
     public void Init()
     {
         StartCoroutine(SpawnInTime());
@@ -54,5 +59,20 @@ public class Spawner : MonoBehaviour
     private float GenerateRandomXPosition()
     {
         return Random.Range(_left.localPosition.x, _right.localPosition.x);
+    }
+
+    private IEnumerator PoisonEffect(float damage, float longTime, float perTime = 1f)
+    {
+        var a = 0f;
+        while (a <= longTime)
+        {
+            yield return new WaitForSeconds(perTime);
+            a += perTime;
+
+            foreach (var e in _zombies)
+            {
+                e.Poison(damage);
+            }
+        }
     }
 }

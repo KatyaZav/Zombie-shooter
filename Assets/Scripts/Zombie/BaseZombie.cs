@@ -25,6 +25,11 @@ public abstract class BaseZombie : MonoBehaviour
     bool _isDead = false;
     bool _isStop;
 
+    public void Poison(float i)
+    {
+        RemoveHp(i);
+    }
+
     public void MakeStop(bool isTrue)
     {
         _isStop = isTrue;
