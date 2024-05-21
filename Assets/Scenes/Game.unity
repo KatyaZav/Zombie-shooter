@@ -1121,8 +1121,8 @@ MonoBehaviour:
     rgba: 4280636394
   _button: {fileID: 295225491}
   _image: {fileID: 295225492}
-  _timeActive: 5
-  _timeRecharge: 5
+  _timeActive: 2.5
+  _timeRecharge: 10
   _timer: {fileID: 717706592}
 --- !u!1 &383536384
 GameObject:
@@ -2068,6 +2068,8 @@ GameObject:
   m_Component:
   - component: {fileID: 955485763}
   - component: {fileID: 955485765}
+  - component: {fileID: 955485766}
+  - component: {fileID: 955485767}
   m_Layer: 5
   m_Name: health
   m_TagString: Untagged
@@ -2106,6 +2108,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 955485762}
   m_CullTransparentMesh: 1
+--- !u!95 &955485766
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955485762}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 064be0c8094c3384f929d4a57d6cce7f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &955485767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955485762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0328deab7dc39242a9f21fb00d6d526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 32490308}
+  _anim: {fileID: 955485766}
 --- !u!1 &977225865
 GameObject:
   m_ObjectHideFlags: 0
@@ -3418,6 +3455,8 @@ GameObject:
   - component: {fileID: 1594656880}
   - component: {fileID: 1594656882}
   - component: {fileID: 1594656881}
+  - component: {fileID: 1594656883}
+  - component: {fileID: 1594656884}
   m_Layer: 5
   m_Name: zombie count
   m_TagString: Untagged
@@ -3484,6 +3523,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594656879}
   m_CullTransparentMesh: 1
+--- !u!114 &1594656883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594656879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0328deab7dc39242a9f21fb00d6d526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 55765867}
+  _anim: {fileID: 1594656884}
+--- !u!95 &1594656884
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594656879}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 255fdfc256e25d84cbdbac9345a425a3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1706542899
 GameObject:
   m_ObjectHideFlags: 0
@@ -3888,7 +3962,7 @@ MonoBehaviour:
   _bigSpawnZone: {fileID: 42871765}
   _smallSpawnZone: {fileID: 383536385}
   _zombiePrefab: {fileID: 6519604305117935832, guid: 1c52af593484a8643a7e22ff6486b16e, type: 3}
-  _timeInSpawn: 3.04
+  _timeInSpawn: 1
 --- !u!1 &1780833076
 GameObject:
   m_ObjectHideFlags: 0
@@ -4012,7 +4086,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbe62cf3be6833b4eb9f0f7d9f93765e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textHP: {fileID: 32490308}
+  _healthUI: {fileID: 955485767}
+  _pointsUI: {fileID: 1594656883}
   _textPoints: {fileID: 55765867}
 --- !u!65 &1853635735
 BoxCollider:

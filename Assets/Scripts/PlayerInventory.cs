@@ -3,7 +3,9 @@ using TMPro;
 
 public class PlayerInventory : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI _textHP;
+    [SerializeField] PlayerUI _healthUI;
+    [SerializeField] PlayerUI _pointsUI;
+
     [SerializeField] TextMeshProUGUI _textPoints;
 
     private int _hp;
@@ -14,8 +16,8 @@ public class PlayerInventory : MonoBehaviour
 
     public void Init()
     {
-        UpdateHealth();
-        UpdatePoints();
+        _healthUI.Init(_hp);
+        _pointsUI.Init(_points);
 
         BaseZombie.ZombieKilledEvent += AddPoints;
     }
@@ -23,7 +25,13 @@ public class PlayerInventory : MonoBehaviour
     public void Hit(int hp)
     {
         _hp -= hp;
-        UpdateHealth();
+        _healthUI.RemovePoint(_hp);
+    }
+
+    public void AddHealth(int hp)
+    {
+        _hp += hp;
+        _healthUI.AddPoint(_hp);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -45,15 +53,6 @@ public class PlayerInventory : MonoBehaviour
     private void AddPoints(int po, BaseZombie zombie)
     {
         _points += po;
-        UpdatePoints();
-    }
-
-    private void UpdateHealth()
-    {
-        _textHP.text = _hp.ToString();
-    }
-    private void UpdatePoints()
-    {
-        _textPoints.text = _points.ToString();
+        _pointsUI.AddPoint(_points);
     }
 }
