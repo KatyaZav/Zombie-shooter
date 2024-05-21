@@ -4,6 +4,7 @@ public class Target : MonoBehaviour
 {
     [SerializeField] Camera _camera;
     [SerializeField] Weapon _weapon;
+    [SerializeField] Animator _anim;
 
     public static Target Instance;
 
@@ -34,10 +35,26 @@ public class Target : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && CheckIsInRightPlace())
         {
-            _weapon.Shoot();
+            if (_weapon.Shoot())
+                OnShoot();
+            else
+                OnCantShoot();
         }
     }
 
+    #region OnShoot
+    private void OnShoot()
+    {
+        _anim.SetTrigger("shoot");
+    }
+
+    private void OnCantShoot()
+    {
+        _anim.SetTrigger("not shoot");
+    }
+    #endregion
+
+    #region Mouse
     Vector3 GetMouseWorldPosition()
     {
         var mouse = Input.mousePosition;
@@ -54,4 +71,5 @@ public class Target : MonoBehaviour
         else
             return false;
     }
+    #endregion
 }

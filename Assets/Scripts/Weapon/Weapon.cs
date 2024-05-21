@@ -26,15 +26,15 @@ public abstract class Weapon : MonoBehaviour
         UpdateCartridge();
         _timer.SetTime(_rechargeTime);
     }
-    public void Shoot() 
+    public bool Shoot() 
     {
         if (_canAttack == false)
-            return;
+            return false;
 
         if (_isUnLimited)
         {
             OnAttack();
-            return;
+            return true;
         }
 
         if (_currentCartridges > 0)
@@ -42,6 +42,7 @@ public abstract class Weapon : MonoBehaviour
             _currentCartridges--;
             UpdateCartridge();
             OnAttack();
+            return true;
         }
         
         if (_currentCartridges <= 0)
@@ -49,7 +50,10 @@ public abstract class Weapon : MonoBehaviour
             _timer.gameObject.SetActive(true);
             _canAttack = false;
             Invoke("Recharge", _rechargeTime);
+            return false;
         }
+
+        return false;
     }
 
     void Recharge()
