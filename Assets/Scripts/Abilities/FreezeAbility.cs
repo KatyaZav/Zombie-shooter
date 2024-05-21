@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class FreezeAbility : BaseAbility
 {
-    protected override void OnClick() { }
-    protected override void OnDisactivate() { }
+    [SerializeField] Spawner _spawner;
+    protected override void OnClick() 
+    {
+        _spawner.StopAllZombies(true);
+    }
+    protected override void OnDisactivate()
+    {
+        _spawner.StopAllZombies(false);
+    }
 }

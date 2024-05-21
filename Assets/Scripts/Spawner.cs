@@ -12,6 +12,12 @@ public class Spawner : MonoBehaviour
 
     ObjectPool<BaseZombie> _zombiesPool;
 
+    public void StopAllZombies(bool isTrue)
+    {
+        foreach (var e in _zombies)
+            e.MakeStop(isTrue);
+    }
+
     public void Init()
     {
         StartCoroutine(SpawnInTime());

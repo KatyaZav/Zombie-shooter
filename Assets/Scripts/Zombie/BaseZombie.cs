@@ -23,6 +23,12 @@ public abstract class BaseZombie : MonoBehaviour
     public static Action<int, BaseZombie> ZombieKilledEvent;
 
     bool _isDead = false;
+    bool _isStop;
+
+    public void MakeStop(bool isTrue)
+    {
+        _isStop = isTrue;
+    }
 
     public virtual void Init(Vector3 pos) 
     {
@@ -79,7 +85,8 @@ public abstract class BaseZombie : MonoBehaviour
         if (_isDead == true)
             return;
 
-        Move();
+        if (_isStop == false)
+            Move();
     }
 
     protected void RemoveHp(float hp) 
@@ -103,6 +110,5 @@ public abstract class BaseZombie : MonoBehaviour
     private void ChangeSize()
     {
         transform.localScale = new Vector3(1, UnityEngine.Random.Range(_size, 1), 1);
-
     }
 }
