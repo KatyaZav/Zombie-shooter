@@ -1,9 +1,15 @@
 using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 public abstract class BaseZombie : MonoBehaviour
 {
+    public static Action<int, BaseZombie> ZombieKilledEvent;
+
+    [SerializeField] protected int _deathCost = 1;
+    [SerializeField] protected float _speed = 1;
+
+    [Space(20)]
+
     [SerializeField] Gradient _gradient;
     [SerializeField] SpriteRenderer[] _partsSprites;
     [SerializeField, Range(0.8f, 1)] float _size;
@@ -15,13 +21,8 @@ public abstract class BaseZombie : MonoBehaviour
     [SerializeField] float _maxHealth;
     [SerializeField] int _damage = 1;
 
-    [SerializeField] protected int _deathCost = 1;
-    [SerializeField] protected float _speed = 1;
-
     bool _wasAttacked = false;
     float _health;
-
-    public static Action<int, BaseZombie> ZombieKilledEvent;
 
     bool _isDead = false;
     bool _isStop;
@@ -62,12 +63,6 @@ public abstract class BaseZombie : MonoBehaviour
     {
         _speed = _speed * (pr / 100f);
     }
-
-    protected virtual void Move() 
-    {
-        transform.Translate(transform.forward * Time.deltaTime * _speed * -1);
-    }
-
     public virtual void Attack(PlayerInventory inventory) 
     {
         if (_wasAttacked == true)
@@ -80,6 +75,11 @@ public abstract class BaseZombie : MonoBehaviour
         ZombieKilledEvent?.Invoke(_deathCost, this);
         _isStop = true;
         Invoke("Disable", 1f);
+    }
+
+    protected virtual void Move() 
+    {
+        transform.Translate(transform.forward * Time.deltaTime * _speed * -1);
     }
     protected virtual void OnDead() 
     {

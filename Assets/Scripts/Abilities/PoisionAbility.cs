@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PoisionAbility : BaseAbility
@@ -10,8 +8,6 @@ public class PoisionAbility : BaseAbility
     protected override void OnClick()
     {
         _spawner.PoisonAllZombies(_damage, _timeActive);
-    }
-    protected override void OnDisactivate()
-    {
+        base.OnClick();
     }
 }

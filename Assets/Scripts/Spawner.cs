@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] List<BaseZombie> _zombies = new List<BaseZombie>();
-    [SerializeField] Transform _left, _right, _bigSpawnZone, _smallSpawnZone;
+    [SerializeField] Transform _left, _right;
     [SerializeField] GameObject _zombiePrefab;
 
     [Range(1, 20), SerializeField] float _timeInSpawn; 
@@ -50,7 +50,7 @@ public class Spawner : MonoBehaviour
         }
     }
 
-    void RemoveZombie(int i, BaseZombie zombie)
+    private void RemoveZombie(int i, BaseZombie zombie)
     {
         _zombiesPool.ReturnObject(zombie);
         _zombies.Remove(zombie);

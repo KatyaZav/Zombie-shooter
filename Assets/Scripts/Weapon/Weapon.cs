@@ -5,26 +5,24 @@ public abstract class Weapon : MonoBehaviour
 {
     [SerializeField] protected int _cartridges;
     [SerializeField] protected float _rechargeTime;
-    [SerializeField] SliderTimer _timer;
-
     [SerializeField] protected GameObject _cartridge;
 
+    [SerializeField] SliderTimer _timer;
     [SerializeField] TextMeshProUGUI _cartridgeText;
 
     private bool _canAttack = true;
     private int _currentCartridges;
     private bool _isUnLimited;
 
-    public void MakeUnlimited(bool isTrue)
-    {
-        _isUnLimited = isTrue;
-    }
-
     public virtual void Init() 
     {
         _currentCartridges = _cartridges;
         UpdateCartridge();
         _timer.SetTime(_rechargeTime);
+    }
+    public void MakeUnlimited(bool isTrue)
+    {
+        _isUnLimited = isTrue;
     }
     public bool Shoot() 
     {
@@ -56,18 +54,17 @@ public abstract class Weapon : MonoBehaviour
         return false;
     }
 
+    protected virtual void OnAttack() { }
+
     void Recharge()
     {
         _currentCartridges = _cartridges;
         UpdateCartridge();
         _canAttack = true;
     }
-
     void UpdateCartridge()
     {
         _cartridgeText.text =
             _currentCartridges.ToString() + "/" + _cartridges.ToString();
     }
-
-    protected virtual void OnAttack() { }
 }

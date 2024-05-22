@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,7 +10,6 @@ public class ObjectPool <T>
     {
         _objectPrefab = prefab;
     }
-
 
     public T GetObject(Transform transform)
     {

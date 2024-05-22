@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -24,5 +22,4 @@ public class PlayerUI : MonoBehaviour
         _anim.SetTrigger("remove");
         _text.text = hp.ToString();
     }
-
 }

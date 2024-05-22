@@ -8,7 +8,6 @@ public class SliderTimer : MonoBehaviour
     private float _timer;
     private float _currentTimer;
 
-
     public void SetTime(float time)
     {
         _timer = time;
@@ -20,7 +19,7 @@ public class SliderTimer : MonoBehaviour
         StartCoroutine(TimerLogic());
     }
 
-    IEnumerator TimerLogic()
+    private IEnumerator TimerLogic()
     {
         while (_currentTimer >= 0)
         {

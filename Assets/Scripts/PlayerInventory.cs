@@ -3,6 +3,8 @@ using TMPro;
 
 public class PlayerInventory : MonoBehaviour
 {
+    public static int Damage { get => _damage; }
+
     [SerializeField] PlayerUI _healthUI;
     [SerializeField] PlayerUI _pointsUI;
 
@@ -12,7 +14,6 @@ public class PlayerInventory : MonoBehaviour
     private int _points;
 
     private static int _damage = 10;
-    public static int Damage { get => _damage; }
 
     public void Init()
     {

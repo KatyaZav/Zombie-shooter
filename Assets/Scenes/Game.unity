@@ -258,37 +258,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 32490306}
   m_CullTransparentMesh: 1
---- !u!1 &42871764
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 42871765}
-  m_Layer: 0
-  m_Name: big
-  m_TagString: Untagged
-  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &42871765
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42871764}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.824, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1758722126}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &54443818
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,15 +619,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f354b8bb32baa24b92a9ab780647032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _helpZone: {fileID: 1994332809}
-  _color:
-    serializedVersion: 2
-    rgba: 4290198024
-  _button: {fileID: 88842774}
   _image: {fileID: 88842775}
   _timeActive: 1
   _timeRecharge: 5
   _timer: {fileID: 1517106980}
+  _button: {fileID: 88842774}
+  _helpZone: {fileID: 1994332809}
+  _color:
+    serializedVersion: 2
+    rgba: 4290198024
   _spawner: {fileID: 1758722127}
 --- !u!1 &162377214
 GameObject:
@@ -1115,46 +1084,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f2d952027351d74d9433add3d6b07bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _helpZone: {fileID: 1780833076}
-  _color:
-    serializedVersion: 2
-    rgba: 4280636394
-  _button: {fileID: 295225491}
   _image: {fileID: 295225492}
   _timeActive: 2.5
   _timeRecharge: 10
   _timer: {fileID: 717706592}
---- !u!1 &383536384
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 383536385}
-  m_Layer: 0
-  m_Name: small
-  m_TagString: Untagged
-  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &383536385
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383536384}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.326, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1758722126}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  _button: {fileID: 295225491}
+  _helpZone: {fileID: 1780833076}
+  _color:
+    serializedVersion: 2
+    rgba: 4280636394
 --- !u!1 &413562095
 GameObject:
   m_ObjectHideFlags: 0
@@ -2797,15 +2735,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 698461253f7642243a1fd9de3089057a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _helpZone: {fileID: 210056403}
-  _color:
-    serializedVersion: 2
-    rgba: 4278233902
-  _button: {fileID: 1385934022}
   _image: {fileID: 1385934023}
   _timeActive: 1
   _timeRecharge: 5
   _timer: {fileID: 2085693793}
+  _button: {fileID: 1385934022}
+  _helpZone: {fileID: 210056403}
+  _color:
+    serializedVersion: 2
+    rgba: 4278233902
   _spawner: {fileID: 1758722127}
   _damage: 1
 --- !u!1 &1426161765
@@ -3361,8 +3299,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cartridges: 5
   _rechargeTime: 3
-  _timer: {fileID: 939951800}
   _cartridge: {fileID: 3490752798063905953, guid: cddbcd950c6f07640a5c9f1ca10399f6, type: 3}
+  _timer: {fileID: 939951800}
   _cartridgeText: {fileID: 1865479115}
 --- !u!114 &1572738806
 MonoBehaviour:
@@ -3962,8 +3900,6 @@ Transform:
   m_Children:
   - {fileID: 1217346767}
   - {fileID: 1426161766}
-  - {fileID: 383536385}
-  - {fileID: 42871765}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3982,8 +3918,6 @@ MonoBehaviour:
   _zombies: []
   _left: {fileID: 1217346767}
   _right: {fileID: 1426161766}
-  _bigSpawnZone: {fileID: 42871765}
-  _smallSpawnZone: {fileID: 383536385}
   _zombiePrefab: {fileID: 6519604305117935832, guid: 1c52af593484a8643a7e22ff6486b16e, type: 3}
   _timeInSpawn: 1
 --- !u!1 &1780833076

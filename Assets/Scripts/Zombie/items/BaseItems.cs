@@ -15,7 +15,6 @@ public abstract class BaseItems : MonoBehaviour
 
         return rnd <= _probability;
     }
-
     public void Activate()
     {
         OnInit();
@@ -24,7 +23,6 @@ public abstract class BaseItems : MonoBehaviour
     } 
 
     protected virtual void OnInit() { }
-
     protected virtual void OnDestroyd() { }
 
     private void OnTriggerEnter(Collider other)

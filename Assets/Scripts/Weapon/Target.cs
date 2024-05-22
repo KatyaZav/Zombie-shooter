@@ -2,22 +2,16 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
+    public static Target Instance;
+
     [SerializeField] Camera _camera;
     [SerializeField] Weapon _weapon;
     [SerializeField] Animator _anim;
-
-    public static Target Instance;
 
     public void MakeUnLimited(bool isUn)
     {
         _weapon.MakeUnlimited(isUn);
     }
-
-    private void Start()
-    {
-        Instance = this;
-    }
-
     public Vector3 GetPosition()
     {
         var pos = transform.position;// * _camera.farClipPlane;
@@ -26,7 +20,10 @@ public class Target : MonoBehaviour
         return pos;
     }
 
-    // Update is called once per frame
+    private void Start()
+    {
+        Instance = this;
+    }
     void Update()
     {
         var vec = GetMouseWorldPosition();

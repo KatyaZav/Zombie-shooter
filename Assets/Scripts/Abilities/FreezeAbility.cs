@@ -8,9 +8,11 @@ public class FreezeAbility : BaseAbility
     protected override void OnClick() 
     {
         _spawner.StopAllZombies(true);
+        base.OnClick();
     }
     protected override void OnDisactivate()
     {
         _spawner.StopAllZombies(false);
+        base.OnDisactivate();
     }
 }
