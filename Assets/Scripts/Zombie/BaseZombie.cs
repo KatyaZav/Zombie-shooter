@@ -6,10 +6,11 @@ public abstract class BaseZombie : MonoBehaviour
 {
     [SerializeField] Gradient _gradient;
     [SerializeField] SpriteRenderer[] _partsSprites;
-    [SerializeField, Range(0.8f, 1)] float _size; 
+    [SerializeField, Range(0.8f, 1)] float _size;
 
     [Space(20)]
 
+    [SerializeField] Animator _anim;
     [SerializeField] HPBar _hpSlider;
     [SerializeField] float _maxHealth;
     [SerializeField] int _damage = 1;
@@ -33,10 +34,12 @@ public abstract class BaseZombie : MonoBehaviour
     public void MakeStop(bool isTrue)
     {
         _isStop = isTrue;
+        _anim.SetBool("walk", _isStop == false);
     }
 
     public virtual void Init(Vector3 pos) 
     {
+        _anim.SetBool("walk", true);
         ChangeColor();
         ChangeSize();
         gameObject.SetActive(true);
@@ -70,11 +73,13 @@ public abstract class BaseZombie : MonoBehaviour
         if (_wasAttacked == true)
             return;
 
+        _anim.SetTrigger("attack");
         _wasAttacked = true;
         inventory.Hit(_damage);
 
         ZombieKilledEvent?.Invoke(_deathCost, this);
-        gameObject.SetActive(false);
+        _isStop = true;
+        Invoke("Disable", 1f);
     }
     protected virtual void OnDead() 
     {
@@ -83,6 +88,14 @@ public abstract class BaseZombie : MonoBehaviour
         _isDead = true;
         gameObject.SetActive(false);
         gameObject.transform.localPosition = Vector3.zero;
+    }
+    protected void RemoveHp(float hp) 
+    {
+        _health -= hp;
+        _hpSlider.UpdateSlider(_health);
+
+        if (_health <= 0 && _isDead == false)
+            OnDead();
     }
 
     private void FixedUpdate()
@@ -94,15 +107,10 @@ public abstract class BaseZombie : MonoBehaviour
             Move();
     }
 
-    protected void RemoveHp(float hp) 
+    private void Disable()
     {
-        _health -= hp;
-        _hpSlider.UpdateSlider(_health);
-
-        if (_health <= 0 && _isDead == false)
-            OnDead();
+        gameObject.SetActive(false);        
     }
-
     private void ChangeColor()
     {
         var color = _gradient.Evaluate(UnityEngine.Random.Range(0f, 1f));
