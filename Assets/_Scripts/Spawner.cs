@@ -7,8 +7,10 @@ public class Spawner : MonoBehaviour
     [SerializeField] List<BaseZombie> _zombies = new List<BaseZombie>();
     [SerializeField] Transform _left, _right;
     [SerializeField] GameObject _zombiePrefab;
+    [SerializeField] GameObject _flyPrefab;
+    [SerializeField] PlayerInventory _inventory;
 
-    [Range(1, 20), SerializeField] float _timeInSpawn; 
+    [Range(5, 15), SerializeField] float _timeInSpawn; 
 
     ObjectPool<BaseZombie> _zombiesPool;
 
@@ -40,14 +42,26 @@ public class Spawner : MonoBehaviour
     {
         while (true)
         {
+
+            _zombies.Add(ChooseZombie());            
+
             yield return new WaitForSeconds(_timeInSpawn);
-
-            var zombie = _zombiesPool.GetObject(this.transform);
-            Vector3 vector = new Vector3(GenerateRandomXPosition(), 0, 0);
-            zombie.Init(vector);
-
-            _zombies.Add(zombie);            
         }
+    }
+
+    private BaseZombie ChooseZombie()
+    {
+        Vector3 vector = new Vector3(GenerateRandomXPosition(), 0, 0);
+
+        /*   var zombie = _zombiesPool.GetObject(this.transform);
+           zombie.Init(vector);*/
+
+        var zombie1 = Instantiate(_flyPrefab, transform);
+        zombie1.transform.localPosition = vector;
+        var zombie = zombie1.GetComponent<MothZombie>();
+        zombie.Init(vector, _inventory);
+
+        return zombie;
     }
 
     private void RemoveZombie(int i, BaseZombie zombie)
