@@ -8810,7 +8810,8 @@ MonoBehaviour:
   _zombiePrefab: {fileID: 6519604305117935832, guid: 1c52af593484a8643a7e22ff6486b16e, type: 3}
   _flyPrefab: {fileID: 4785629371166460649, guid: 389ddd5222783af4aba638bcdb4e460b, type: 3}
   _inventory: {fileID: 1853635734}
-  _timeInSpawn: 5
+  _timeInSpawn: 10
+  _maxScore: 40
 --- !u!1 &1780833076
 GameObject:
   m_ObjectHideFlags: 0
@@ -8936,6 +8937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _healthUI: {fileID: 955485767}
   _pointsUI: {fileID: 1594656883}
+  _spawner: {fileID: 1758722127}
   _textPoints: {fileID: 55765867}
 --- !u!65 &1853635735
 BoxCollider:

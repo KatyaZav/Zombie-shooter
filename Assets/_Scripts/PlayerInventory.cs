@@ -7,6 +7,7 @@ public class PlayerInventory : MonoBehaviour
 
     [SerializeField] PlayerUI _healthUI;
     [SerializeField] PlayerUI _pointsUI;
+    [SerializeField] Spawner _spawner;
 
     [SerializeField] TextMeshProUGUI _textPoints;
 
@@ -55,5 +56,6 @@ public class PlayerInventory : MonoBehaviour
     {
         _points += po;
         _pointsUI.AddPoint(_points);
+        _spawner.AddPoints(_points);
     }
 }

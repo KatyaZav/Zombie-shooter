@@ -10,9 +10,28 @@ public class Spawner : MonoBehaviour
     [SerializeField] GameObject _flyPrefab;
     [SerializeField] PlayerInventory _inventory;
 
-    [Range(5, 15), SerializeField] float _timeInSpawn; 
+    [Range(5, 8), SerializeField] float _timeInSpawn;
+    [SerializeField] float _maxScore;
 
     ObjectPool<BaseZombie> _zombiesPool;
+
+    public void AddPoints(int point)
+    {
+        if (point == 0)
+        {
+            _timeInSpawn = 8;
+            return;
+        }
+
+        float A = 5 - 8;
+        float B = 1 - _maxScore;
+        float C = _maxScore * 8 - 5;
+
+        float k = -A / B;
+        float b = -C / B;
+
+        _timeInSpawn = (k*point) + b;
+    }
 
     public void StopAllZombies(bool isTrue)
     {
@@ -55,7 +74,7 @@ public class Spawner : MonoBehaviour
 
         BaseZombie zombie;
 
-        if (Random.Range(0f,5f) <= 0.5f)
+        if (Random.Range(0f,8f) <= 0.6f)
         {
             var zombie1 = Instantiate(_flyPrefab, transform);
             zombie1.transform.localPosition = vector;
