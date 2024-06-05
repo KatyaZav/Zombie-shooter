@@ -13,7 +13,6 @@ public abstract class BaseItems : MonoBehaviour
     {
         var rnd = Random.Range(0, 100);
 
-        Debug.Log(gameObject.name + rnd + " " + _probability * kof);
         return rnd <= _probability * kof;
     }
     public void Activate()

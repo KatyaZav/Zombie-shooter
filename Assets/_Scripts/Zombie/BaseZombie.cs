@@ -40,10 +40,10 @@ public abstract class BaseZombie : MonoBehaviour
 
     public virtual void Init(Vector3 pos) 
     {
-        _anim.SetBool("walk", true);
         ChangeColor();
         ChangeSize();
         gameObject.SetActive(true);
+        _anim.SetBool("walk", true);
 
         _isDead = false;
         _health = _maxHealth;

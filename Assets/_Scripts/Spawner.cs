@@ -27,8 +27,8 @@ public class Spawner : MonoBehaviour
 
     public void Init()
     {
-        StartCoroutine(SpawnInTime());
         _zombiesPool = new ObjectPool<BaseZombie>(_zombiePrefab);
+        StartCoroutine(SpawnInTime());
 
         BaseZombie.ZombieKilledEvent += RemoveZombie;
     }
@@ -53,13 +53,23 @@ public class Spawner : MonoBehaviour
     {
         Vector3 vector = new Vector3(GenerateRandomXPosition(), 0, 0);
 
-        /*   var zombie = _zombiesPool.GetObject(this.transform);
-           zombie.Init(vector);*/
+        BaseZombie zombie;
 
-        var zombie1 = Instantiate(_flyPrefab, transform);
-        zombie1.transform.localPosition = vector;
-        var zombie = zombie1.GetComponent<MothZombie>();
-        zombie.Init(vector, _inventory);
+        if (Random.Range(0f,5f) <= 0.5f)
+        {
+            var zombie1 = Instantiate(_flyPrefab, transform);
+            zombie1.transform.localPosition = vector;
+            var zombieMoth = zombie1.GetComponent<MothZombie>();
+            zombieMoth.Init(vector, _inventory);
+
+            zombie = zombieMoth;
+        }
+        else
+        {
+            zombie = _zombiesPool.GetObject(this.transform);
+            zombie.Init(vector);
+        }
+
 
         return zombie;
     }
