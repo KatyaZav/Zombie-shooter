@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Loader : MonoBehaviour
 {
@@ -12,10 +13,25 @@ public class Loader : MonoBehaviour
 
     void Start()
     {
+        SceneManager.sceneLoaded += SceneChanged;
+
         _textAdvise.text = _translationTexts
             [Random.Range(0, _translationTexts.Length - 1)].GetText("ru");
 
         StartCoroutine(AnimatorTimer());
+
+        Wait();
+        //Invoke("Wait", 2f);
+    }
+
+    private void SceneChanged(Scene a, LoadSceneMode b)
+    {
+        SceneManager.UnloadSceneAsync("Loader");
+    }
+
+    private void Wait()
+    {
+        SceneManager.LoadSceneAsync("Game", LoadSceneMode.Additive);
     }
 
     private IEnumerator AnimatorTimer()
