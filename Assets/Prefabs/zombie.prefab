@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 10
-  _probability: 10
+  _probability: 2
   _zombie: {fileID: 1614974628415631467}
 --- !u!1 &1390358402956347031
 GameObject:
@@ -432,7 +432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 20
-  _probability: 15
+  _probability: 1.5
   _zombie: {fileID: 1614974628415631467}
 --- !u!1 &1640246188467744522
 GameObject:
@@ -554,7 +554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 5
-  _probability: 30
+  _probability: 2.7
   _zombie: {fileID: 1614974628415631467}
 --- !u!1 &1729587789291297117
 GameObject:
@@ -863,7 +863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 10
-  _probability: 10
+  _probability: 3
   _zombie: {fileID: 1614974628415631467}
 --- !u!1 &4284801653318455271
 GameObject:
@@ -1415,6 +1415,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 712142c8dd843294887cb6e88d367b27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _deathCost: 1
+  _speed: 1
   _gradient:
     serializedVersion: 2
     key0: {r: 0.44088644, g: 0.4433962, b: 0.44186246, a: 1}
@@ -1458,8 +1460,6 @@ MonoBehaviour:
   _hpSlider: {fileID: 8642819519201545}
   _maxHealth: 30
   _damage: 1
-  _deathCost: 1
-  _speed: 1
   _parts:
   - {fileID: 724553104891433262}
   - {fileID: 8480205076435877351}
@@ -1728,7 +1728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 50
-  _probability: 15
+  _probability: 3
   _zombie: {fileID: 1614974628415631467}
 --- !u!1 &7644298786566090743
 GameObject:
@@ -1976,7 +1976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 20
-  _probability: 5
+  _probability: 1.5
   _zombie: {fileID: 1614974628415631467}
 --- !u!1 &8696462780374844783
 GameObject:

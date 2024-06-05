@@ -4,16 +4,17 @@ using UnityEngine;
 public abstract class BaseItems : MonoBehaviour
 {
     [SerializeField] protected float _hp;
-    [SerializeField] protected float _probability;
+    [SerializeField, Range(0,10)] protected float _probability;
     [SerializeField] protected StandartZombie _zombie;
 
     private bool _isDestroyed = false;
 
-    public bool CheckProbability()
+    public bool CheckProbability(float kof = 1)
     {
         var rnd = Random.Range(0, 100);
 
-        return rnd <= _probability;
+        Debug.Log(gameObject.name + rnd + " " + _probability * kof);
+        return rnd <= _probability * kof;
     }
     public void Activate()
     {
