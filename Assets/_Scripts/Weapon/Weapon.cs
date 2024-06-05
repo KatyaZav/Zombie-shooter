@@ -40,14 +40,16 @@ public abstract class Weapon : MonoBehaviour
             _currentCartridges--;
             UpdateCartridge();
             OnAttack();
+
+            if (_currentCartridges <= 0)
+                CheckRechard();
+
             return true;
         }
         
         if (_currentCartridges <= 0)
         {
-            _timer.gameObject.SetActive(true);
-            _canAttack = false;
-            Invoke("Recharge", _rechargeTime);
+            CheckRechard();
             return false;
         }
 
@@ -55,6 +57,13 @@ public abstract class Weapon : MonoBehaviour
     }
 
     protected virtual void OnAttack() { }
+
+    private void CheckRechard()
+    {
+        _timer.gameObject.SetActive(true);
+        _canAttack = false;
+        Invoke("Recharge", _rechargeTime);
+    }
 
     void Recharge()
     {
