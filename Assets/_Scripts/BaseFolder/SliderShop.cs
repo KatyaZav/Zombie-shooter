@@ -9,7 +9,7 @@ public class SliderShop : MonoBehaviour
     
     private int _current;
 
-    public bool IsGettedMaxValue() => _current == _sliderParts.Length - 1;
+    public bool IsGettedMaxValue() => _current == _sliderParts.Length;
     public int GetMaxSliderValue() => _sliderParts.Length;
 
     public void SetSlider(int count)

@@ -287,6 +287,7 @@ GameObject:
   - component: {fileID: 50742933}
   - component: {fileID: 50742932}
   - component: {fileID: 50742934}
+  - component: {fileID: 50742935}
   m_Layer: 5
   m_Name: settings (2)
   m_TagString: Untagged
@@ -377,7 +378,23 @@ MonoBehaviour:
   - {fileID: 1041073259}
   - {fileID: 321028112}
   - {fileID: 1688769125}
-  _color: {r: 14, g: 202, b: 0, a: 1}
+  _color: {r: 0.050980393, g: 0.7921569, b: 0, a: 1}
+--- !u!114 &50742935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50742930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4249f82d955fbbb4fad2d46c76e33164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slider: {fileID: 50742934}
+  _button: {fileID: 235046331}
+  _costText: {fileID: 468110477}
+  _cost: {fileID: 11400000, guid: 9c3a72b286acfb044a9ce7727014b078, type: 2}
 --- !u!1 &53789653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,7 +1140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -4013,7 +4030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -6250,6 +6267,7 @@ GameObject:
   - component: {fileID: 1558339964}
   - component: {fileID: 1558339963}
   - component: {fileID: 1558339965}
+  - component: {fileID: 1558339966}
   m_Layer: 5
   m_Name: settings (1)
   m_TagString: Untagged
@@ -6340,7 +6358,23 @@ MonoBehaviour:
   - {fileID: 409500191}
   - {fileID: 473181504}
   - {fileID: 758635682}
-  _color: {r: 14, g: 202, b: 0, a: 1}
+  _color: {r: 0.050980393, g: 0.7921569, b: 0, a: 1}
+--- !u!114 &1558339966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558339961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4249f82d955fbbb4fad2d46c76e33164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slider: {fileID: 1558339965}
+  _button: {fileID: 850074919}
+  _costText: {fileID: 1366996039}
+  _cost: {fileID: 11400000, guid: 9c3a72b286acfb044a9ce7727014b078, type: 2}
 --- !u!1 &1567619727
 GameObject:
   m_ObjectHideFlags: 0

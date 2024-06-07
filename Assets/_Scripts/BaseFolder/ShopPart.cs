@@ -16,19 +16,23 @@ public class ShopPart : MonoBehaviour
     public void Init(int points)
     {
         _button.onClick.AddListener(AddPointBought);
-        _currentPoints = points;
+        _currentPoints = Mathf.Clamp(points, 0, _slider.GetMaxSliderValue());
 
         UpdateSlider();
     }
 
     public void UpdateSlider()
     {
-        _costText.text = _cost.GetCost(_currentPoints).ToString(); 
+        _slider.SetSlider(_currentPoints);
 
         if (_slider.IsGettedMaxValue())
+        {
             OnFillSlider();
-
-        _slider.SetSlider(_currentPoints);
+        }
+        else
+        {
+            _costText.text = _cost.GetCost(_currentPoints).ToString(); 
+        }
     }
 
     private void AddPointBought()
