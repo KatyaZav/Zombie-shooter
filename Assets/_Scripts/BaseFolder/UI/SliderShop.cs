@@ -9,10 +9,10 @@ public class SliderShop : MonoBehaviour
     
     private int _current;
 
-    public bool IsGettedMaxValue() => _current == _sliderParts.Length;
-    public int GetMaxSliderValue() => _sliderParts.Length;
+    public virtual bool IsGettedMaxValue() => _current == _sliderParts.Length;
+    public virtual int GetMaxSliderValue() => _sliderParts.Length;
 
-    public void SetSlider(int count)
+    public virtual void SetSlider(int count)
     {
         _current = count;
 
@@ -24,5 +24,4 @@ public class SliderShop : MonoBehaviour
                 _sliderParts[i].color = Color.white;
         }
     }
-
 }

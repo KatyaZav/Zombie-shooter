@@ -4,17 +4,24 @@ using UnityEngine;
 
 public class BootstrapMenu : MonoBehaviour
 {
-    //[SerializeField] SliderMenuUpdater _update;
-    [SerializeField] ShopPart[] _shopParts;
+    [SerializeField] ShopPart[] _weapon;
+    [SerializeField] ShopPart[] _ability;
 
     void Start()
     {
-        //_update.Init();
+        Init();
+    }
 
-        foreach (var e in _shopParts)
+    void Init()
+    {
+        foreach (var e in _weapon)
+        {
+            e.Init(0);
+        }
+
+        foreach (var e in _ability)
         {
             e.Init(0);
         }
     }
-
 }
