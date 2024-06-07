@@ -10,6 +10,7 @@ public class ShopPart : MonoBehaviour
     [SerializeField] Cost _cost;
 
     private int _currentPoints;
+    private Color _currentColor;
 
     public void Init(int points)
     {
@@ -47,7 +48,7 @@ public class ShopPart : MonoBehaviour
         else
         {
             Debug.Log("not enought money");
-            Debug.Log("make effect");
+            MakeAnimation();
         }
 
     }
@@ -58,6 +59,20 @@ public class ShopPart : MonoBehaviour
         _button.gameObject.SetActive(false);
         _button.onClick.RemoveListener(OnClick);
     }
+
+    #region Animation
+    private void MakeAnimation()
+    {
+        _currentColor = _costText.color;
+        _costText.color = Color.red;
+        Invoke("StopAnimation", 2);
+    }
+
+    private void StopAnimation()
+    {
+        _costText.color = _currentColor;
+    }
+    #endregion
 
     private void OnValidate()
     {
