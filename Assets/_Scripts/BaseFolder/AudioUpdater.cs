@@ -1,0 +1,36 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+public class AudioUpdater : MonoBehaviour
+{
+    [SerializeField] Button _button;
+    [SerializeField] Image _image;
+    [SerializeField] Sprite[] sprites;
+
+    private void OnEnable()
+    {
+        if (YG.YandexGame.SDKEnabled)
+            Init();
+    }
+
+    public void Init()
+    {
+        _button.onClick.AddListener(OnClick);
+
+        UpdateImage();
+    }
+
+    private void OnClick()
+    {
+        PlayerSave.SetMusicOn();
+        UpdateImage();
+    }
+
+    private void UpdateImage()
+    {
+        if (PlayerSave.MusicOn)
+            _image.sprite = sprites[0];
+        else
+            _image.sprite = sprites[1];
+    }
+}

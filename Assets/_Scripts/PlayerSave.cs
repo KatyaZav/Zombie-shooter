@@ -14,6 +14,13 @@ public class PlayerSave
         YandexGame.savesData.MusicOn = isOn;
         YandexGame.SaveProgress();
     }
+
+    public static void SetMusicOn()
+    {
+        YandexGame.savesData.MusicOn = !YandexGame.savesData.MusicOn;
+        YandexGame.SaveProgress();
+    }
+
     public static void AddMoney(int money)
     {
         YandexGame.savesData.Money = Money + money;
