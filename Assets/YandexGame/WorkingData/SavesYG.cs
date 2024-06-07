@@ -18,7 +18,12 @@ namespace YG
 
         // Ваши сохранения
 
-        // ...
+        public bool MusicOn = true;
+        public int Money = 0;
+        public int Record = 0;
+
+        public WeaponType Pistol = new WeaponType();
+        public Ability[] Abilities = new Ability[3];
 
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
 

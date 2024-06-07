@@ -389,6 +389,7 @@ GameObject:
   - component: {fileID: 53789654}
   - component: {fileID: 53789656}
   - component: {fileID: 53789655}
+  - component: {fileID: 53789657}
   m_Layer: 5
   m_Name: step (1)
   m_TagString: Untagged
@@ -457,6 +458,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53789653}
   m_CullTransparentMesh: 1
+--- !u!114 &53789657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53789653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1b3898a3c4fc344b8b88f8e70ec0e02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sliderParts:
+  - {fileID: 853146804}
+  - {fileID: 648376901}
+  - {fileID: 1999479112}
+  - {fileID: 1057132335}
+  - {fileID: 1119537753}
+  - {fileID: 75146342}
+  - {fileID: 1666545239}
+  - {fileID: 1547968551}
+  _color: {r: 14, g: 202, b: 0, a: 1}
 --- !u!1 &75146340
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,7 +954,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00012207031, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -0.00012207, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &134082133
@@ -2654,7 +2677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.050980393, g: 0.7921569, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3484,6 +3507,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 680163706}
   m_CullTransparentMesh: 1
+--- !u!1 &731430094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 731430096}
+  - component: {fileID: 731430095}
+  m_Layer: 0
+  m_Name: Bootstrap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &731430095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731430094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa6e74797641ec43b352d881e72579b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shopParts:
+  - {fileID: 1298905479}
+--- !u!4 &731430096
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731430094}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.03424239, y: 0.46641845, z: 1181.0127}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &752552612
 GameObject:
   m_ObjectHideFlags: 0
@@ -3867,7 +3936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.050980393, g: 0.7921569, b: 0, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5244,6 +5313,7 @@ GameObject:
   - component: {fileID: 1298905477}
   - component: {fileID: 1298905476}
   - component: {fileID: 1298905478}
+  - component: {fileID: 1298905479}
   m_Layer: 5
   m_Name: settings
   m_TagString: Untagged
@@ -5329,12 +5399,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sliderParts:
-  - {fileID: 2110563395}
-  - {fileID: 816482286}
-  - {fileID: 1584621050}
-  - {fileID: 1409056109}
-  - {fileID: 475676214}
-  _color: {r: 14, g: 202, b: 0, a: 1}
+  - {fileID: 2110563397}
+  - {fileID: 816482288}
+  - {fileID: 1584621052}
+  - {fileID: 1409056111}
+  - {fileID: 475676216}
+  _color: {r: 0.050980393, g: 0.7921569, b: 0, a: 1}
+--- !u!114 &1298905479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298905474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4249f82d955fbbb4fad2d46c76e33164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slider: {fileID: 1298905478}
+  _button: {fileID: 1967357574}
+  _costText: {fileID: 117526650}
+  _cost: {fileID: 11400000, guid: 9c3a72b286acfb044a9ce7727014b078, type: 2}
 --- !u!1 &1366996037
 GameObject:
   m_ObjectHideFlags: 0
@@ -5597,7 +5683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.052123517, g: 0.7924528, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5633,6 +5719,7 @@ GameObject:
   - component: {fileID: 1469969590}
   - component: {fileID: 1469969592}
   - component: {fileID: 1469969591}
+  - component: {fileID: 1469969593}
   m_Layer: 5
   m_Name: step (2)
   m_TagString: Untagged
@@ -5701,6 +5788,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469969589}
   m_CullTransparentMesh: 1
+--- !u!114 &1469969593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469969589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1b3898a3c4fc344b8b88f8e70ec0e02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sliderParts:
+  - {fileID: 138592908}
+  - {fileID: 9119532}
+  - {fileID: 101688910}
+  - {fileID: 2073818308}
+  - {fileID: 2165783}
+  - {fileID: 2141135782}
+  - {fileID: 571210827}
+  - {fileID: 680163708}
+  _color: {r: 14, g: 202, b: 0, a: 1}
 --- !u!1 &1510547118
 GameObject:
   m_ObjectHideFlags: 0
@@ -6243,6 +6352,7 @@ GameObject:
   - component: {fileID: 1567619728}
   - component: {fileID: 1567619730}
   - component: {fileID: 1567619729}
+  - component: {fileID: 1567619731}
   m_Layer: 5
   m_Name: step
   m_TagString: Untagged
@@ -6311,6 +6421,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567619727}
   m_CullTransparentMesh: 1
+--- !u!114 &1567619731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567619727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1b3898a3c4fc344b8b88f8e70ec0e02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sliderParts:
+  - {fileID: 1814065002}
+  - {fileID: 1088537718}
+  - {fileID: 89079782}
+  - {fileID: 1670012567}
+  - {fileID: 1369419360}
+  - {fileID: 867096747}
+  - {fileID: 1263910608}
+  - {fileID: 1703601591}
+  _color: {r: 14, g: 202, b: 0, a: 1}
 --- !u!1 &1584621050
 GameObject:
   m_ObjectHideFlags: 0
@@ -6926,6 +7058,7 @@ GameObject:
   - component: {fileID: 1690180143}
   - component: {fileID: 1690180142}
   - component: {fileID: 1690180141}
+  - component: {fileID: 1690180145}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -7022,6 +7155,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1690180145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690180140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aefb261478d391c408463f43d984d686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weaponCartridge: {fileID: 1298905478}
+  _weaponPower: {fileID: 1558339965}
+  _weaponRecharge: {fileID: 50742934}
+  _abilities:
+  - {fileID: 1567619731}
+  - {fileID: 53789657}
+  - {fileID: 1469969593}
+  _textRecord: {fileID: 451781158}
 --- !u!1 &1690585172
 GameObject:
   m_ObjectHideFlags: 0
@@ -7928,7 +8081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -8276,7 +8429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.050980393, g: 0.7921569, b: 0, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
