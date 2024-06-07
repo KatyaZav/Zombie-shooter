@@ -9,6 +9,9 @@ public class PlayerSave
     public static WeaponType Pistol => YandexGame.savesData.Pistol;
     public static Ability[] Abilities => YandexGame.savesData.Abilities;
 
+    public static bool CheakMoneyEnought(int cost) => Money >= cost;
+
+
     public static void SetMusicOn(bool isOn)
     {
         YandexGame.savesData.MusicOn = isOn;

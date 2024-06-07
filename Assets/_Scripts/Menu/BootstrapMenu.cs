@@ -4,6 +4,7 @@ using YG;
 public class BootstrapMenu : MonoBehaviour
 {
     [SerializeField] AudioUpdater _audio;
+    [SerializeField] CoinHolder _coin;
 
     [SerializeField] ShopPart[] _weapon;
     [SerializeField] ShopPart[] _ability;
@@ -24,6 +25,7 @@ public class BootstrapMenu : MonoBehaviour
     void Init()
     {
         _audio.Init();
+        _coin.Init();
 
         foreach (var e in _weapon)
         {

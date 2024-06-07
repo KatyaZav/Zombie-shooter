@@ -13,7 +13,7 @@ public class ShopPart : MonoBehaviour
 
     public void Init(int points)
     {
-        _button.onClick.AddListener(AddPointBought);
+        _button.onClick.AddListener(OnClick);
         _currentPoints = Mathf.Clamp(points, 0, _slider.GetMaxSliderValue());
 
         UpdateSlider();
@@ -33,17 +33,30 @@ public class ShopPart : MonoBehaviour
         }
     }
 
-    private void AddPointBought()
+    private void OnClick()
     {
-        _currentPoints++;
-        UpdateSlider();
+        var cost = _cost.GetCost(_currentPoints);
+
+        if (PlayerSave.CheakMoneyEnought(cost))
+        {
+            PlayerSave.RemoveMoney(cost);
+
+            _currentPoints++;
+            UpdateSlider();
+        }
+        else
+        {
+            Debug.Log("not enought money");
+            Debug.Log("make effect");
+        }
+
     }
 
     private void OnFillSlider()
     {
         _costText.text = "";
         _button.gameObject.SetActive(false);
-        _button.onClick.RemoveListener(AddPointBought);
+        _button.onClick.RemoveListener(OnClick);
     }
 
     private void OnValidate()
