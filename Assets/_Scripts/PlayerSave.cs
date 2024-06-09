@@ -7,7 +7,7 @@ public class PlayerSave
     public static int Record => YandexGame.savesData.Record;
     public static bool MusicOn => YandexGame.savesData.MusicOn;
     public static int[] Pistol => YandexGame.savesData.Pistol;
-    public static Ability[] Abilities => YandexGame.savesData.Abilities;
+    public static int[] Abilities => YandexGame.savesData.Abilities;
 
     public static bool CheakMoneyEnought(int cost) => Money >= cost;
 
@@ -45,30 +45,11 @@ public class PlayerSave
             YandexGame.SaveProgress();
         }
     }
-
-    public static void AddBoughtAbility(Ability ability)
+    public static void AddBoughtAbility(int index)
     {
-        int x = -1;
-
-        for (var i = 0; i < Abilities.Length; i++)
-        {
-            if (Abilities[i] == ability)
-            {
-                x = i;
-                return;
-            }
-        }
-
-        if (x == -1)
-        {
-            Debug.LogError("can't find ability");
-            return;
-        }
-
-        YandexGame.savesData.Abilities[x].bought++;
+        YandexGame.savesData.Abilities[index]++;
         YandexGame.SaveProgress();
     }
-
     public static void AddBoughtWeapon(WeaponSettings settings)
     {
         YandexGame.savesData.Pistol[(int)settings]++;
@@ -82,10 +63,4 @@ public enum WeaponSettings
     cartridge = 0,
     power = 1,
     recharge = 2
-}
-public class Ability
-{
-    public int bought = 0;
-    public bool isBought = false;
-    public int cost = 200;
 }

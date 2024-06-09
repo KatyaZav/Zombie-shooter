@@ -38,7 +38,7 @@ public class BootstrapMenu : MonoBehaviour
         i = 0;
         foreach (var e in _ability)
         {
-            e.Init(0);
+            e.Init(PlayerSave.Abilities[i]);
             i++;
         }
     }

@@ -19,11 +19,11 @@ namespace YG
         // Ваши сохранения
 
         public bool MusicOn = true;
-        public int Money = 0;
+        public int Money = 100;
         public int Record = 0;
 
         public int[] Pistol = new int[3];
-        public Ability[] Abilities = new Ability[3];
+        public int[] Abilities = new int[3];
 
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
 

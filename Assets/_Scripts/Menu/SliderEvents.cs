@@ -8,4 +8,9 @@ public class SliderEvents : MonoBehaviour
     {
         PlayerSave.AddBoughtWeapon((WeaponSettings)settings);
     }
+
+    public void BuyAbulity(int index)
+    {
+        PlayerSave.AddBoughtAbility(index);
+    }
 }
