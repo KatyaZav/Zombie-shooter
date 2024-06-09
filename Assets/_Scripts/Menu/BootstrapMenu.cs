@@ -13,6 +13,8 @@ public class BootstrapMenu : MonoBehaviour
     [SerializeField] TextMeshProUGUI _text;
     [SerializeField] TranslationText _translation;
 
+    [SerializeField] AddIcons _icon;
+
     void Start()
     {
         if (YandexGame.SDKEnabled)
@@ -47,5 +49,7 @@ public class BootstrapMenu : MonoBehaviour
         }
 
         _text.text = _translation.GetText(PlayerSave.Language) + PlayerSave.Record.ToString();
+
+        _icon.Init();
     }
 }
