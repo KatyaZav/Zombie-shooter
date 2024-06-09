@@ -1,5 +1,6 @@
 using UnityEngine;
 using YG;
+using TMPro;
 
 public class BootstrapMenu : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class BootstrapMenu : MonoBehaviour
 
     [SerializeField] ShopPart[] _weapon;
     [SerializeField] ShopPart[] _ability;
+
+    [SerializeField] TextMeshProUGUI _text;
+    [SerializeField] TranslationText _translation;
 
     void Start()
     {
@@ -41,5 +45,7 @@ public class BootstrapMenu : MonoBehaviour
             e.Init(PlayerSave.Abilities[i]);
             i++;
         }
+
+        _text.text = _translation.GetText(PlayerSave.Language) + PlayerSave.Record.ToString();
     }
 }

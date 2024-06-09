@@ -8,6 +8,7 @@ public class PlayerSave
     public static bool MusicOn => YandexGame.savesData.MusicOn;
     public static int[] Pistol => YandexGame.savesData.Pistol;
     public static int[] Abilities => YandexGame.savesData.Abilities;
+    public static string Language => YandexGame.lang;
 
     public static bool CheakMoneyEnought(int cost) => Money >= cost;
 

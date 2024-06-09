@@ -3772,6 +3772,11 @@ MonoBehaviour:
   - {fileID: 1567619732}
   - {fileID: 53789658}
   - {fileID: 1469969594}
+  _text: {fileID: 451781158}
+  _translation:
+    _rus: "\u0420\u0435\u043A\u043E\u0440\u0434: "
+    _en: 
+    _tur: 
 --- !u!4 &731430096
 Transform:
   m_ObjectHideFlags: 0
