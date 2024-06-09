@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 public class ShopPart : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class ShopPart : MonoBehaviour
     [SerializeField] TextMeshProUGUI _costText;
     [SerializeField] Cost _cost;
 
+    [SerializeField] UnityEvent OnClickEvent;
+    
     private int _currentPoints;
     private Color _currentColor;
 
@@ -42,7 +45,7 @@ public class ShopPart : MonoBehaviour
         {
             PlayerSave.RemoveMoney(cost);
             Subscriber.StartChangeMoneyEvent();
-
+            OnClickEvent?.Invoke();
             _currentPoints++;
             UpdateSlider();
         }

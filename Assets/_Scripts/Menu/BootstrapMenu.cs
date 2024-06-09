@@ -27,14 +27,19 @@ public class BootstrapMenu : MonoBehaviour
         _audio.Init();
         _coin.Init();
 
+        var i = 0;
+
         foreach (var e in _weapon)
         {
-            e.Init(0);
+            e.Init(PlayerSave.Pistol[i]);
+            i++;
         }
 
+        i = 0;
         foreach (var e in _ability)
         {
             e.Init(0);
+            i++;
         }
     }
 }

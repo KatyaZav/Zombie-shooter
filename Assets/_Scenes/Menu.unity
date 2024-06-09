@@ -395,6 +395,21 @@ MonoBehaviour:
   _button: {fileID: 235046331}
   _costText: {fileID: 468110477}
   _cost: {fileID: 11400000, guid: 9c3a72b286acfb044a9ce7727014b078, type: 2}
+  OnClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1010756202}
+        m_TargetAssemblyTypeName: SliderEvents, Assembly-CSharp
+        m_MethodName: BuyWeapon
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &53789653
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,6 +530,9 @@ MonoBehaviour:
   _button: {fileID: 280952527}
   _costText: {fileID: 242629405}
   _cost: {fileID: 11400000, guid: 6c327aba901fa8d478c6b00e28378835, type: 2}
+  OnClickEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &75146340
 GameObject:
   m_ObjectHideFlags: 0
@@ -3755,6 +3773,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 499812487}
+  - {fileID: 1010756203}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4588,6 +4607,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949375929}
   m_CullTransparentMesh: 1
+--- !u!1 &1010756201
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1010756203}
+  - component: {fileID: 1010756202}
+  m_Layer: 0
+  m_Name: SliderEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1010756202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010756201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23173119c43ca8943882a559ab143e95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1010756203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010756201}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 731430096}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1041073259
 GameObject:
   m_ObjectHideFlags: 0
@@ -5640,6 +5703,21 @@ MonoBehaviour:
   _button: {fileID: 1967357574}
   _costText: {fileID: 117526650}
   _cost: {fileID: 11400000, guid: 9c3a72b286acfb044a9ce7727014b078, type: 2}
+  OnClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1010756202}
+        m_TargetAssemblyTypeName: SliderEvents, Assembly-CSharp
+        m_MethodName: BuyWeapon
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1366996037
 GameObject:
   m_ObjectHideFlags: 0
@@ -6047,6 +6125,9 @@ MonoBehaviour:
   _button: {fileID: 509108800}
   _costText: {fileID: 949375931}
   _cost: {fileID: 11400000, guid: 6c327aba901fa8d478c6b00e28378835, type: 2}
+  OnClickEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1510547118
 GameObject:
   m_ObjectHideFlags: 0
@@ -6595,6 +6676,21 @@ MonoBehaviour:
   _button: {fileID: 850074919}
   _costText: {fileID: 1366996039}
   _cost: {fileID: 11400000, guid: 9c3a72b286acfb044a9ce7727014b078, type: 2}
+  OnClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1010756202}
+        m_TargetAssemblyTypeName: SliderEvents, Assembly-CSharp
+        m_MethodName: BuyWeapon
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1567619727
 GameObject:
   m_ObjectHideFlags: 0
@@ -6715,6 +6811,9 @@ MonoBehaviour:
   _button: {fileID: 395230131}
   _costText: {fileID: 1529115891}
   _cost: {fileID: 11400000, guid: 6c327aba901fa8d478c6b00e28378835, type: 2}
+  OnClickEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1584621050
 GameObject:
   m_ObjectHideFlags: 0
@@ -8362,7 +8461,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1967357575}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 3a1178ce04641624fa4683d00202e774, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1967357575
 MonoBehaviour:
   m_ObjectHideFlags: 0

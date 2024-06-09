@@ -6,7 +6,7 @@ public class PlayerSave
     public static int Money => YandexGame.savesData.Money;
     public static int Record => YandexGame.savesData.Record;
     public static bool MusicOn => YandexGame.savesData.MusicOn;
-    public static WeaponType Pistol => YandexGame.savesData.Pistol;
+    public static int[] Pistol => YandexGame.savesData.Pistol;
     public static Ability[] Abilities => YandexGame.savesData.Abilities;
 
     public static bool CheakMoneyEnought(int cost) => Money >= cost;
@@ -71,39 +71,18 @@ public class PlayerSave
 
     public static void AddBoughtWeapon(WeaponSettings settings)
     {
-        switch (settings)
-        {
-            case WeaponSettings.cartridge:
-                YandexGame.savesData.Pistol.cartridge++;
-                break;
-            case WeaponSettings.power:
-                YandexGame.savesData.Pistol.power++;
-                break;
-            case WeaponSettings.recharge:
-                YandexGame.savesData.Pistol.recharge++;
-                break;
-        }
-
+        YandexGame.savesData.Pistol[(int)settings]++;
         YandexGame.SaveProgress();
     }
 }
 
+[System.Serializable]
 public enum WeaponSettings
 {
-    cartridge,
-    power,
-    recharge
+    cartridge = 0,
+    power = 1,
+    recharge = 2
 }
-
-public class WeaponType
-{
-    public int cartridge = 0; 
-    public int power = 0; 
-    public int recharge = 0;
-    
-    public int cost = 150;
-}
-
 public class Ability
 {
     public int bought = 0;
