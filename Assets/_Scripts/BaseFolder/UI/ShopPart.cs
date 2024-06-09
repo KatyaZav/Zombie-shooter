@@ -41,6 +41,7 @@ public class ShopPart : MonoBehaviour
         if (PlayerSave.CheakMoneyEnought(cost))
         {
             PlayerSave.RemoveMoney(cost);
+            Subscriber.StartChangeMoneyEvent();
 
             _currentPoints++;
             UpdateSlider();

@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 public class Subscriber
 {
@@ -6,6 +7,7 @@ public class Subscriber
 
     public static void StartChangeMoneyEvent()
     {
+        Debug.Log("Change Money Event");
         ChangeMoneyEvent?.Invoke();
     }
 }
