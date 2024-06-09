@@ -12,6 +12,8 @@ public class Bootstrap : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = false;
+
         foreach (var e in _abilities)
             e.Init();
 

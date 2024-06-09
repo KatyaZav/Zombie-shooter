@@ -30,6 +30,8 @@ public class BootstrapMenu : MonoBehaviour
 
     void Init()
     {
+        Cursor.visible = false;
+
         _audio.Init();
         _coin.Init();
 
