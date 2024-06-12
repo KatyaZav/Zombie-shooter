@@ -2421,7 +2421,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0.50980395}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.71132076, g: 1, b: 0.72458154, a: 1}
     m_PressedColor: {r: 0, g: 1, b: 0.023912907, a: 0.7058824}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -2560,7 +2560,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0.50980395}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.70980394, g: 1, b: 0.7254902, a: 1}
     m_PressedColor: {r: 0, g: 1, b: 0.023912907, a: 0.7058824}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -4787,7 +4787,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1087464099}
   m_Father: {fileID: 1690180144}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5055,17 +5056,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087464098}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1690180144}
+  m_Father: {fileID: 990031832}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -269.81018, y: -400}
+  m_AnchoredPosition: {x: 138.18979, y: -133.20001}
   m_SizeDelta: {x: 376.39, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1087464100
@@ -5538,8 +5539,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278226956
-  m_fontColor: {r: 0.04705883, g: 0.5647059, b: 0, a: 1}
+    rgba: 4280952405
+  m_fontColor: {r: 0.33333334, g: 0.14901961, b: 0.16470589, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5829,7 +5830,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0.50980395}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.71132076, g: 1, b: 0.72458154, a: 1}
     m_PressedColor: {r: 0, g: 1, b: 0.023912907, a: 0.7058824}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -7946,9 +7947,8 @@ RectTransform:
   m_Children:
   - {fileID: 134082132}
   - {fileID: 990031832}
-  - {fileID: 1087464099}
-  - {fileID: 1521370787}
   - {fileID: 1668866465}
+  - {fileID: 1521370787}
   - {fileID: 1228483707}
   - {fileID: 1736424107}
   - {fileID: 1793715617}
@@ -8754,7 +8754,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0.50980395}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.71132076, g: 1, b: 0.72458154, a: 1}
     m_PressedColor: {r: 0, g: 1, b: 0.023912907, a: 0.7058824}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
