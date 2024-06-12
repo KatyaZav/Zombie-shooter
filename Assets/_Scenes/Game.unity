@@ -620,7 +620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _image: {fileID: 88842775}
-  _timeActive: 1
+  _timeActive: 2
   _timeRecharge: 5
   _timer: {fileID: 1517106980}
   _button: {fileID: 88842774}
@@ -628,6 +628,7 @@ MonoBehaviour:
   _color:
     serializedVersion: 2
     rgba: 4290198024
+  _particle: {fileID: 1138027354}
   _spawner: {fileID: 1758722127}
 --- !u!1 &162377214
 GameObject:
@@ -1085,7 +1086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _image: {fileID: 295225492}
-  _timeActive: 2.5
+  _timeActive: 4
   _timeRecharge: 10
   _timer: {fileID: 717706592}
   _button: {fileID: 295225491}
@@ -1093,6 +1094,7 @@ MonoBehaviour:
   _color:
     serializedVersion: 2
     rgba: 4280636394
+  _particle: {fileID: 874204430}
 --- !u!1 &334368608
 GameObject:
   m_ObjectHideFlags: 0
@@ -12014,7 +12016,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &950745295
 Transform:
   m_ObjectHideFlags: 0
@@ -22460,7 +22462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _image: {fileID: 1385934023}
-  _timeActive: 1
+  _timeActive: 3
   _timeRecharge: 5
   _timer: {fileID: 2085693793}
   _button: {fileID: 1385934022}
@@ -22468,6 +22470,7 @@ MonoBehaviour:
   _color:
     serializedVersion: 2
     rgba: 4278233902
+  _particle: {fileID: 822861822}
   _spawner: {fileID: 1758722127}
   _damage: 1
 --- !u!1 &1426161765

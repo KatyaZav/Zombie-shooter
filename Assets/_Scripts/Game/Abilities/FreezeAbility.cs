@@ -5,6 +5,7 @@ using UnityEngine;
 public class FreezeAbility : BaseAbility
 {
     [SerializeField] Spawner _spawner;
+    
     protected override void OnClick() 
     {
         _spawner.StopAllZombies(true);

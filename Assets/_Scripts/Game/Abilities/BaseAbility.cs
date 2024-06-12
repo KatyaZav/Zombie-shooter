@@ -14,6 +14,8 @@ public abstract class BaseAbility : MonoBehaviour, IPointerEnterHandler, IPointe
     [SerializeField] GameObject _helpZone;
     [SerializeField] Color32 _color;
 
+    [SerializeField] GameObject _particle;
+
     bool _isActive = true;
     Color32 _baseColor;
 
@@ -30,6 +32,8 @@ public abstract class BaseAbility : MonoBehaviour, IPointerEnterHandler, IPointe
         _isActive = false;
         _button.enabled = false;
         _image.color = _color;
+
+        _particle.SetActive(true);
 
         OnClick();
 
@@ -48,7 +52,10 @@ public abstract class BaseAbility : MonoBehaviour, IPointerEnterHandler, IPointe
     }
 
     protected virtual void OnClick() { }
-    protected virtual void OnDisactivate() { }
+    protected virtual void OnDisactivate() 
+    {
+        _particle.SetActive(false);
+    }
 
     void ActivateTimer()
     {
