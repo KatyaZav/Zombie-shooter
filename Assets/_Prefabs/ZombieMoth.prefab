@@ -265,6 +265,7 @@ GameObject:
   - component: {fileID: 6385098444550618752}
   - component: {fileID: 7503991253066072895}
   - component: {fileID: 1256916177351419016}
+  - component: {fileID: 3303012585930989563}
   m_Layer: 0
   m_Name: ZombieMoth
   m_TagString: Untagged
@@ -397,6 +398,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.342444, y: 4.5170493, z: 2.2418356}
   m_Center: {x: -0.7483083, y: 0.8854972, z: 0.109303035}
+--- !u!114 &3303012585930989563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4785629371166460649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06b7530fb9371a7469d3805603c8a612, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scripts:
+  - {fileID: 2871000526420509548}
 --- !u!1 &6256591433211487987
 GameObject:
   m_ObjectHideFlags: 0

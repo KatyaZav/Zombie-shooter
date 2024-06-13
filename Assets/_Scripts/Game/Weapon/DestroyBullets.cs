@@ -6,7 +6,7 @@ public class DestroyBullets : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Bullet"))
         {
-            Destroy(other.gameObject, 0.1f);
+            Destroy(other.gameObject);
         }        
     }
 }

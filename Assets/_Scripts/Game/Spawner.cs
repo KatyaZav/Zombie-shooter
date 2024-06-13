@@ -10,10 +10,11 @@ public class Spawner : MonoBehaviour
     [SerializeField] GameObject _flyPrefab;
     [SerializeField] PlayerInventory _inventory;
 
-    [Range(5, 8), SerializeField] float _timeInSpawn;
+    [Range(2, 4), SerializeField] float _timeInSpawn;
     [SerializeField] float _maxScore;
 
     ObjectPool<BaseZombie> _zombiesPool;
+    bool wasInit;
 
     public void AddPoints(int point)
     {
@@ -23,9 +24,9 @@ public class Spawner : MonoBehaviour
             return;
         }
 
-        float A = 5 - 8;
+        float A = 2 - 4;
         float B = 1 - _maxScore;
-        float C = _maxScore * 8 - 5;
+        float C = _maxScore * 4 - 2;
 
         float k = -A / B;
         float b = -C / B;
@@ -47,24 +48,38 @@ public class Spawner : MonoBehaviour
     public void Init()
     {
         _zombiesPool = new ObjectPool<BaseZombie>(_zombiePrefab);
-        StartCoroutine(SpawnInTime());
+        StartCoroutine(SpawnInTime(true));
 
         BaseZombie.ZombieKilledEvent += RemoveZombie;
+        wasInit = true;
     }
 
     private void OnDisable()
     {
-        BaseZombie.ZombieKilledEvent -= RemoveZombie;        
+        BaseZombie.ZombieKilledEvent -= RemoveZombie;
+        StopAllCoroutines();
     }
 
-    private IEnumerator SpawnInTime()
+    private void OnEnable()
     {
+        if (wasInit == false)
+            return;
+
+        BaseZombie.ZombieKilledEvent += RemoveZombie;
+        StartCoroutine(SpawnInTime(false));
+    }
+
+    private IEnumerator SpawnInTime(bool needFirst)
+    {
+        if (needFirst)
+            _zombies.Add(ChooseZombie());     
+        
         while (true)
         {
 
-            _zombies.Add(ChooseZombie());            
 
             yield return new WaitForSeconds(_timeInSpawn);
+            _zombies.Add(ChooseZombie());            
         }
     }
 
