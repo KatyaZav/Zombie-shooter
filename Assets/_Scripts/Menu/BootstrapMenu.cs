@@ -13,7 +13,7 @@ public class BootstrapMenu : MonoBehaviour
     [SerializeField] TextMeshProUGUI _text;
     [SerializeField] TranslationText _translation;
 
-    [SerializeField] AddIcons _icon;
+    //[SerializeField] AddIcons _icon;
 
     void Start()
     {
@@ -52,6 +52,6 @@ public class BootstrapMenu : MonoBehaviour
 
         _text.text = _translation.GetText(PlayerSave.Language) + PlayerSave.Record.ToString();
 
-        _icon.Init();
+        //_icon.Init();
     }
 }

@@ -3,11 +3,14 @@ using YG;
 
 public class AddIcons : MonoBehaviour
 {
-    public void Init()
+    bool getProm;
+
+    /*public void Init()
     {
         YandexGame.PromptSuccessEvent += AddMoney;
 
-        gameObject.SetActive(YandexGame.EnvironmentData.promptCanShow);
+        Debug.Log("promt can show "+ YandexGame.EnvironmentData.promptCanShow);
+        //gameObject.SetActive(YandexGame.EnvironmentData.promptCanShow);
     }
 
     private void OnDisable()
@@ -18,9 +21,9 @@ public class AddIcons : MonoBehaviour
     public void AddIcon()
     {
         YandexGame.PromptShow();
-    }
+    }*/
 
-    private void AddMoney()
+    public void AddMoney()
     {
         PlayerSave.AddMoney(150);
         gameObject.SetActive(false);
