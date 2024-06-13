@@ -15,8 +15,8 @@ public class Loader : MonoBehaviour
     {
         SceneManager.sceneLoaded += SceneChanged;
 
-        _textAdvise.text = _translationTexts
-            [Random.Range(0, _translationTexts.Length - 1)].GetText("ru");
+        /*_textAdvise.text = _translationTexts
+            [Random.Range(0, _translationTexts.Length - 1)].GetText("ru");*/
 
         StartCoroutine(AnimatorTimer());
 
