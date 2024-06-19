@@ -7,6 +7,11 @@ public class PauseController : MonoBehaviour
 {
     [SerializeField] GameObject _pauseMenu;
 
+    public void ChangeScene(string n)
+    {
+        SceneManager.LoadScene(n);
+    }
+
     public void MakePause(bool isPause)
     {
         Subscriber.ChangePause(isPause);

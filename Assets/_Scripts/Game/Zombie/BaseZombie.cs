@@ -27,6 +27,12 @@ public abstract class BaseZombie : MonoBehaviour
     bool _isDead = false;
     bool _isStop;
 
+
+    public void AddPoint()
+    {
+        _deathCost++;
+    }
+
     public void Poison(float i)
     {
         RemoveHp(i);

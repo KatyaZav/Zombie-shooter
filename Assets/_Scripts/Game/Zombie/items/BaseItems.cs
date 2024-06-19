@@ -17,6 +17,7 @@ public abstract class BaseItems : MonoBehaviour
     }
     public void Activate()
     {
+        _zombie.AddPoint();
         OnInit();
 
         gameObject.SetActive(true);

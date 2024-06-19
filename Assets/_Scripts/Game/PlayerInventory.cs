@@ -5,6 +5,7 @@ public class PlayerInventory : MonoBehaviour
 {
     public static int Damage { get => _damage; }
 
+    [SerializeField] LoseMenu Lose;
     [SerializeField] PlayerUI _healthUI;
     [SerializeField] PlayerUI _pointsUI;
     [SerializeField] Spawner _spawner;
@@ -29,6 +30,16 @@ public class PlayerInventory : MonoBehaviour
     public void Hit(int hp)
     {
         _hp -= hp;
+
+        if (_hp < 0)
+        {
+            int money = Mathf.RoundToInt(_points * Random.Range(1.1f, 2.2f));
+            Debug.Log("Getted money " + money);
+            PlayerSave.AddMoney(money);
+            Lose.SetMoney(money);
+            Lose.gameObject.SetActive(true);
+        }
+
         _healthUI.RemovePoint(_hp);
     }
 
