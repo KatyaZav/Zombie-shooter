@@ -10,12 +10,15 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField] SliderTimer _timer;
     [SerializeField] TextMeshProUGUI _cartridgeText;
 
+    [SerializeField] int[] _reload;
+
     private bool _canAttack = true;
     private int _currentCartridges;
     private bool _isUnLimited;
 
     public virtual void Init() 
     {
+        LoadData();
         _currentCartridges = _cartridges;
         UpdateCartridge();
         _timer.SetTime(_rechargeTime);
@@ -75,5 +78,11 @@ public abstract class Weapon : MonoBehaviour
     {
         _cartridgeText.text =
             _currentCartridges.ToString() + "/" + _cartridges.ToString();
+    }
+
+    void LoadData()
+    {
+        _rechargeTime = _reload[YG.YandexGame.savesData.Pistol[(int)WeaponSettings.recharge]];
+        _cartridges = (int)(5 + 2f * YG.YandexGame.savesData.Pistol[(int)WeaponSettings.cartridge]);
     }
 }

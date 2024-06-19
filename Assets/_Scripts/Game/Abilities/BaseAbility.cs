@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 
 public abstract class BaseAbility : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    [SerializeField] int index;
     [SerializeField] protected Image _image;
     [SerializeField] protected float _timeActive;
     [SerializeField] protected float _timeRecharge;
@@ -15,12 +16,16 @@ public abstract class BaseAbility : MonoBehaviour, IPointerEnterHandler, IPointe
     [SerializeField] Color32 _color;
 
     [SerializeField] GameObject _particle;
+    [SerializeField] int[] waitTime;
 
     bool _isActive = true;
     Color32 _baseColor;
 
     public virtual void Init() 
     {
+        _timeActive = 1.5f*YG.YandexGame.savesData.Abilities[index];
+        _timeRecharge = waitTime[YG.YandexGame.savesData.Abilities[index]];
+
         _timer.SetTime(_timeRecharge + _timeActive);
         _baseColor = _image.color;
     }

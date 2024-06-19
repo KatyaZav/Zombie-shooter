@@ -619,6 +619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f354b8bb32baa24b92a9ab780647032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   _image: {fileID: 88842775}
   _timeActive: 10
   _timeRecharge: 5
@@ -629,6 +630,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4290198024
   _particle: {fileID: 1138027354}
+  waitTime: 1e0000001d0000001c0000001a0000001700000014000000120000000f000000
   _spawner: {fileID: 1758722127}
 --- !u!1 &162377214
 GameObject:
@@ -1085,6 +1087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f2d952027351d74d9433add3d6b07bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 2
   _image: {fileID: 295225492}
   _timeActive: 4
   _timeRecharge: 10
@@ -1095,6 +1098,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4280636394
   _particle: {fileID: 874204430}
+  waitTime: 320000002d0000002800000026000000220000001c0000001a00000016000000
 --- !u!1 &334368608
 GameObject:
   m_ObjectHideFlags: 0
@@ -22595,6 +22599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 698461253f7642243a1fd9de3089057a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 1
   _image: {fileID: 1385934023}
   _timeActive: 3
   _timeRecharge: 5
@@ -22605,6 +22610,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4278233902
   _particle: {fileID: 822861822}
+  waitTime: 230000001e0000001c0000001a0000001600000014000000120000000d000000
   _spawner: {fileID: 1758722127}
   _inv: {fileID: 0}
   _damage: 1
@@ -23337,6 +23343,7 @@ MonoBehaviour:
   _cartridge: {fileID: 3490752798063905953, guid: cddbcd950c6f07640a5c9f1ca10399f6, type: 3}
   _timer: {fileID: 939951800}
   _cartridgeText: {fileID: 1865479115}
+  _reload: 0d0000000c0000000b0000000a000000090000000800000007000000
 --- !u!114 &1572738806
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83fbcf45f13128438be9dbe461dd4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageCoefficient: 3
+  _damageCoefficient: 2
 --- !u!1 &748235586258769458
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,7 +622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83fbcf45f13128438be9dbe461dd4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageCoefficient: 3
+  _damageCoefficient: 2
 --- !u!1 &2451524887088796963
 GameObject:
   m_ObjectHideFlags: 0
@@ -1525,7 +1525,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scripts:
   - {fileID: 1614974628415631467}
-  _needToDisable: 0
 --- !u!1 &6760355230585595055
 GameObject:
   m_ObjectHideFlags: 0

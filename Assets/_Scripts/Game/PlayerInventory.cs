@@ -14,10 +14,12 @@ public class PlayerInventory : MonoBehaviour
     private int _hp;
     private int _points;
 
-    private static int _damage = 10;
+    private static int _damage;
 
     public void Init()
     {
+        _damage = 1 + (int)(1.5f*YG.YandexGame.savesData.Pistol[(int)WeaponSettings.power]);
+
         _healthUI.Init(_hp);
         _pointsUI.Init(_points);
 
