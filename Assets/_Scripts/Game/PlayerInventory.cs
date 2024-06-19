@@ -36,6 +36,8 @@ public class PlayerInventory : MonoBehaviour
             int money = Mathf.RoundToInt(_points * Random.Range(1.1f, 2.2f));
             Debug.Log("Getted money " + money);
             PlayerSave.AddMoney(money);
+            PlayerSave.SetRecord(_points);
+
             Lose.SetMoney(money);
             Lose.gameObject.SetActive(true);
         }
