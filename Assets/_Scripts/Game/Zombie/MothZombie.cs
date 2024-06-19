@@ -5,6 +5,7 @@ using UnityEngine;
 public class MothZombie : BaseZombie
 {
     PlayerInventory _inventory;
+    //[SerializeField] Sprite _sprite;
 
     public void Init(Vector3 pos, PlayerInventory inventory)
     {
@@ -28,6 +29,7 @@ public class MothZombie : BaseZombie
     {
         if (other.gameObject.CompareTag("Bullet"))
         {
+            //Instantiate(_sprite, other.transform.position, Quaternion.identity);
             //Debug.Log("Destroy  bulet");
             Destroy(other.gameObject);
             RemoveHp(1);

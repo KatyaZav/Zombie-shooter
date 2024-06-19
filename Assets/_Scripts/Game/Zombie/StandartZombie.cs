@@ -42,4 +42,12 @@ public class StandartZombie : BaseZombie
 
         return koef;
     }
+
+    private void OnDestroy()
+    {
+        foreach (var e in _parts)
+        {
+            e.DamagePartEvent += RemoveHp;
+        }
+    }
 }
