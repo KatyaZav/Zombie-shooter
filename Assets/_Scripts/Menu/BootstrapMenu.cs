@@ -32,6 +32,12 @@ public class BootstrapMenu : MonoBehaviour
 
     void Init()
     {
+        if (YandexGame.EnvironmentData.payload == "DeleteSaves")
+        {
+            YandexGame.ResetSaveProgress();
+            YandexGame.SaveProgress(); 
+        }
+
         Cursor.visible = false;
 
         _audio.Init();
