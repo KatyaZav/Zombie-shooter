@@ -26,6 +26,9 @@ public abstract class BaseAbility : MonoBehaviour, IPointerEnterHandler, IPointe
         _timeActive = 1.5f*YG.YandexGame.savesData.Abilities[index];
         _timeRecharge = waitTime[YG.YandexGame.savesData.Abilities[index]];
 
+        if (YG.YandexGame.savesData.Abilities[index] == 0)
+            gameObject.SetActive(false);
+
         _timer.SetTime(_timeRecharge + _timeActive);
         _baseColor = _image.color;
     }
