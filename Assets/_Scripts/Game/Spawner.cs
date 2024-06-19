@@ -10,11 +10,14 @@ public class Spawner : MonoBehaviour
     [SerializeField] GameObject _flyPrefab;
     [SerializeField] PlayerInventory _inventory;
 
-    [Range(2, 4), SerializeField] float _timeInSpawn;
+    [Range(1.5f, 4), SerializeField] float _timeInSpawn;
     [SerializeField] float _maxScore;
 
     ObjectPool<BaseZombie> _zombiesPool;
     bool wasInit;
+
+    float min = 1.5f;
+    float max = 4;
 
     public void AddPoints(int point)
     {
@@ -24,9 +27,9 @@ public class Spawner : MonoBehaviour
             return;
         }
 
-        float A = 2 - 4;
+        float A = min - max;
         float B = 1 - _maxScore;
-        float C = _maxScore * 4 - 2;
+        float C = _maxScore * max - min;
 
         float k = -A / B;
         float b = -C / B;
@@ -47,6 +50,15 @@ public class Spawner : MonoBehaviour
 
     public void Init()
     {
+        if (PlayerSave.GameCount < 2)
+            max = 4;
+        else if (PlayerSave.GameCount < 8)
+            max = 3.5f;
+        else if (PlayerSave.GameCount < 15)
+            max = 3.2f;
+        else if (PlayerSave.GameCount < 20)
+            max = 3;
+
         _zombiesPool = new ObjectPool<BaseZombie>(_zombiePrefab);
         StartCoroutine(SpawnInTime(true));
 

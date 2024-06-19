@@ -25143,7 +25143,7 @@ MonoBehaviour:
   _zombiePrefab: {fileID: 6519604305117935832, guid: 1c52af593484a8643a7e22ff6486b16e, type: 3}
   _flyPrefab: {fileID: 4785629371166460649, guid: 389ddd5222783af4aba638bcdb4e460b, type: 3}
   _inventory: {fileID: 1853635734}
-  _timeInSpawn: 8
+  _timeInSpawn: 4
   _maxScore: 25
 --- !u!114 &1758722128
 MonoBehaviour:
