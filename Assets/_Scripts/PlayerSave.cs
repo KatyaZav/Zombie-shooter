@@ -9,9 +9,39 @@ public class PlayerSave
     public static int[] Pistol => YandexGame.savesData.Pistol;
     public static int[] Abilities => YandexGame.savesData.Abilities;
     public static string Language => YandexGame.lang;
+    public static int GameCount => YandexGame.savesData.GameCount;
+
+    public static void GetMinAndMax(out float a, out float b)
+    {
+        if (GameCount < 5)
+        {
+            a = 1.1f;
+            b = 2.2f;
+        }
+        else if (GameCount < 15)
+        {
+            a = 1.3f;
+            b = 2.5f;
+        }
+        else if (GameCount < 35)
+        {
+            a = 1.5f;
+            b = 2.7f;
+        }
+        else
+        {
+            a = 1.7f;
+            b = 2.9f;
+        }
+    }
 
     public static bool CheakMoneyEnought(int cost) => Money >= cost;
 
+    public static void AddGameCount()
+    {
+        YandexGame.savesData.GameCount++;
+        YandexGame.SaveProgress();
+    }
 
     public static void SetMusicOn(bool isOn)
     {

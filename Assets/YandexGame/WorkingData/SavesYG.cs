@@ -24,6 +24,7 @@ namespace YG
 
         public int[] Pistol = new int[3];
         public int[] Abilities = new int[3];
+        public int GameCount = 0;
 
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
 

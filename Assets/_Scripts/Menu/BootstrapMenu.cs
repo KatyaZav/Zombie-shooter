@@ -13,6 +13,8 @@ public class BootstrapMenu : MonoBehaviour
     [SerializeField] TextMeshProUGUI _text;
     [SerializeField] TranslationText _translation;
 
+    [SerializeField] GameObject left, center;
+
     //[SerializeField] AddIcons _icon;
 
     void Start()
@@ -53,5 +55,17 @@ public class BootstrapMenu : MonoBehaviour
         _text.text = _translation.GetText(PlayerSave.Language) + PlayerSave.Record.ToString();
 
         //_icon.Init();
+
+        left.SetActive(false);
+        center.SetActive(false);
+
+        if (PlayerSave.GameCount >= 1)
+        {
+            center.SetActive(true);
+        }
+        if (PlayerSave.GameCount >= 2)
+        {
+            left.SetActive(true);
+        }
     }
 }

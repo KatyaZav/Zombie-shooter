@@ -33,11 +33,15 @@ public class PlayerInventory : MonoBehaviour
 
         if (_hp < 0)
         {
-            int money = Mathf.RoundToInt(_points * Random.Range(1.1f, 2.2f));
+            float a, b;
+            PlayerSave.GetMinAndMax(out a, out b);
+
+            int money = Mathf.RoundToInt(_points * Random.Range(a, b));
             Debug.Log("Getted money " + money);
             PlayerSave.AddMoney(money);
             PlayerSave.SetRecord(_points);
 
+            PlayerSave.AddGameCount();
             Lose.SetMoney(money);
             Lose.gameObject.SetActive(true);
         }
