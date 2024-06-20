@@ -16,18 +16,22 @@ public abstract class BaseAbility : MonoBehaviour, IPointerEnterHandler, IPointe
     [SerializeField] Color32 _color;
 
     [SerializeField] GameObject _particle;
-    [SerializeField] int[] waitTime;
+    [SerializeField] int[] waitTime = new int[6];
+    [SerializeField] int[] _timeAbility = new int[6];
 
     bool _isActive = true;
     Color32 _baseColor;
 
     public virtual void Init() 
     {
-        _timeActive = 1.5f*YG.YandexGame.savesData.Abilities[index];
-        _timeRecharge = waitTime[YG.YandexGame.savesData.Abilities[index]];
-
         if (YG.YandexGame.savesData.Abilities[index] == 0)
+        {
             gameObject.SetActive(false);
+            return;
+        }
+
+        _timeActive = _timeAbility[YG.YandexGame.savesData.Abilities[index]-1];
+        _timeRecharge = waitTime[YG.YandexGame.savesData.Abilities[index]-1];
 
         _timer.SetTime(_timeRecharge + _timeActive);
         _baseColor = _image.color;

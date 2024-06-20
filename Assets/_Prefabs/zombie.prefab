@@ -66,7 +66,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83fbcf45f13128438be9dbe461dd4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 0}
   _damageCoefficient: 2
 --- !u!1 &748235586258769458
 GameObject:
@@ -190,7 +189,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83fbcf45f13128438be9dbe461dd4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 1045941721, guid: 4b5a2c04c88aea747b5c526011fb288a, type: 3}
   _damageCoefficient: 1
 --- !u!1 &1179114413678202496
 GameObject:
@@ -624,7 +622,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83fbcf45f13128438be9dbe461dd4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 0}
   _damageCoefficient: 2
 --- !u!1 &2451524887088796963
 GameObject:
@@ -745,7 +742,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83fbcf45f13128438be9dbe461dd4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 1045941721, guid: 4b5a2c04c88aea747b5c526011fb288a, type: 3}
   _damageCoefficient: 1
 --- !u!1 &2719638834222229740
 GameObject:
@@ -1072,7 +1068,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83fbcf45f13128438be9dbe461dd4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 0}
   _damageCoefficient: 1
 --- !u!1 &5299937438478651234
 GameObject:
@@ -1193,7 +1188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83fbcf45f13128438be9dbe461dd4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 1045941721, guid: 4b5a2c04c88aea747b5c526011fb288a, type: 3}
   _damageCoefficient: 1
 --- !u!1 &6336829994711471105
 GameObject:
@@ -1315,7 +1309,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83fbcf45f13128438be9dbe461dd4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 1045941721, guid: 4b5a2c04c88aea747b5c526011fb288a, type: 3}
   _damageCoefficient: 1
 --- !u!1 &6519604305117935832
 GameObject:
@@ -1466,7 +1459,7 @@ MonoBehaviour:
   _size: 0
   _anim: {fileID: 6513098747975550073}
   _hpSlider: {fileID: 8642819519201545}
-  _maxHealth: 30
+  _maxHealth: 22
   _damage: 1
   _parts:
   - {fileID: 724553104891433262}
@@ -1877,7 +1870,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83fbcf45f13128438be9dbe461dd4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 1045941721, guid: 4b5a2c04c88aea747b5c526011fb288a, type: 3}
   _damageCoefficient: 1
 --- !u!1 &8592577174882084516
 GameObject:
@@ -2121,5 +2113,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83fbcf45f13128438be9dbe461dd4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 1045941721, guid: 4b5a2c04c88aea747b5c526011fb288a, type: 3}
   _damageCoefficient: 1

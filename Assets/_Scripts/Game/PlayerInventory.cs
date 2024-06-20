@@ -11,6 +11,7 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] Spawner _spawner;
 
     [SerializeField] TextMeshProUGUI _textPoints;
+    [SerializeField] int[] _damageUpd;
 
     private int _hp;
     private int _points;
@@ -19,7 +20,7 @@ public class PlayerInventory : MonoBehaviour
 
     public void Init()
     {
-        _damage = 1 + (int)(1.5f*YG.YandexGame.savesData.Pistol[(int)WeaponSettings.power]);
+        _damage = _damageUpd[YG.YandexGame.savesData.Pistol[(int)WeaponSettings.power]];
 
         _healthUI.Init(_hp);
         _pointsUI.Init(_points);

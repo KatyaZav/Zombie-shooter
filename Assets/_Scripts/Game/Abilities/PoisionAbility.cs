@@ -8,8 +8,8 @@ public class PoisionAbility : BaseAbility
 
     protected override void OnClick()
     {
-        if (Random.Range(0, 10) <= 1)
-            _inv.Hit(1);
+        //if (Random.Range(0, 10) <= 1)
+        //    _inv.Hit(1);
 
         _spawner.PoisonAllZombies(_damage, _timeActive);
         base.OnClick();

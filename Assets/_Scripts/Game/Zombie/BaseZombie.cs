@@ -99,6 +99,7 @@ public abstract class BaseZombie : MonoBehaviour
     {
         _health -= hp;
         _hpSlider.UpdateSlider(_health);
+        //Debug.Log("add zombie damage " + hp + " it have " + _health);
 
         if (_health <= 0 && _isDead == false)
             OnDead();

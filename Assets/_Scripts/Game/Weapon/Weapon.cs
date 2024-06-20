@@ -11,6 +11,7 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField] TextMeshProUGUI _cartridgeText;
 
     [SerializeField] int[] _reload;
+    [SerializeField] int[] _cartridgesUpd;
 
     private bool _canAttack = true;
     private int _currentCartridges;
@@ -83,6 +84,6 @@ public abstract class Weapon : MonoBehaviour
     void LoadData()
     {
         _rechargeTime = _reload[YG.YandexGame.savesData.Pistol[(int)WeaponSettings.recharge]];
-        _cartridges = (int)(5 + 2f * YG.YandexGame.savesData.Pistol[(int)WeaponSettings.cartridge]);
+        _cartridges = _cartridgesUpd[YG.YandexGame.savesData.Pistol[(int)WeaponSettings.cartridge]];
     }
 }
