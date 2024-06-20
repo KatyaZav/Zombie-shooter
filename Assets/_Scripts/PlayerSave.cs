@@ -57,16 +57,16 @@ public class PlayerSave
 
     public static void AddMoney(int money)
     {
-        Subscriber.StartChangeMoneyEvent();
         YandexGame.savesData.Money = Money + money;
         YandexGame.SaveProgress();
+        Subscriber.StartChangeMoneyEvent();
     }
 
     public static void RemoveMoney(int money)
     {
-        Subscriber.StartChangeMoneyEvent();
         YandexGame.savesData.Money = Money - money;
         YandexGame.SaveProgress();
+        Subscriber.StartChangeMoneyEvent();
     }
 
     public static void SetRecord(int record)
