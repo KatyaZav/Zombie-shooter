@@ -19,7 +19,7 @@ namespace YG
         // Ваши сохранения
 
         public bool MusicOn = true;
-        public int Money = 100;
+        public int Money = 30;
         public int Record = 0;
 
         public int[] Pistol = new int[3];

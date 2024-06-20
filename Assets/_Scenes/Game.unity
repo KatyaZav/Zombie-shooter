@@ -12068,7 +12068,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.005004883, y: 0.000061035156}
+  m_AnchoredPosition: {x: -0.0048828125, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &860444968
@@ -24079,7 +24079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaultResolution: {x: 1920, y: 1080}
-  WidthOrHeight: 0.5
+  WidthOrHeight: 0.3
 --- !u!1 &1535797863
 GameObject:
   m_ObjectHideFlags: 0
@@ -24116,10 +24116,10 @@ RectTransform:
   m_Father: {fileID: 2134683880}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -960.0099, y: -539.9975}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_AnchoredPosition: {x: -0.009765625, y: 0.0024414062}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1535797865
 MonoBehaviour:
@@ -24210,7 +24210,7 @@ MonoBehaviour:
   _cartridge: {fileID: 3490752798063905953, guid: cddbcd950c6f07640a5c9f1ca10399f6, type: 3}
   _timer: {fileID: 939951800}
   _cartridgeText: {fileID: 1865479115}
-  _reload: 0d0000000c0000000b0000000a000000090000000800000007000000
+  _reload: 0b0000000a0000000900000008000000070000000600000005000000
 --- !u!114 &1572738806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26169,7 +26169,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.5
+  m_MatchWidthOrHeight: 0.3
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
