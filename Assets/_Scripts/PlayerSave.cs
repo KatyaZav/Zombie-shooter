@@ -49,7 +49,7 @@ public class PlayerSave
         YandexGame.SaveProgress();
     }
 
-    public static void SetMusicOn()
+    public static void SwipeMusicOn()
     {
         YandexGame.savesData.MusicOn = !YandexGame.savesData.MusicOn;
         YandexGame.SaveProgress();

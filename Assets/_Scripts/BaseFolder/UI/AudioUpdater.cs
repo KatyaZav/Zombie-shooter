@@ -22,7 +22,7 @@ public class AudioUpdater : MonoBehaviour
 
     private void OnClick()
     {
-        PlayerSave.SetMusicOn();
+        PlayerSave.SwipeMusicOn();
         UpdateImage();
     }
 

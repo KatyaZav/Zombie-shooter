@@ -13,6 +13,11 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] TextMeshProUGUI _textPoints;
     [SerializeField] int[] _damageUpd;
 
+    [Space(10)]
+    [Header("Audio")]
+    [SerializeField] AudioComponent _audio;
+    [SerializeField] AudioClip _loseAudio, _pointAudio, _hitAudio, _addHpAudio;
+
     private int _hp;
     private int _points;
 
@@ -31,9 +36,11 @@ public class PlayerInventory : MonoBehaviour
     public void Hit(int hp)
     {
         _hp -= hp;
+        _audio.MakeSound(_hitAudio);
 
         if (_hp < 0)
         {
+            _audio.MakeSound(_loseAudio);
             float a, b;
             PlayerSave.GetMinAndMax(out a, out b);
 
@@ -54,6 +61,7 @@ public class PlayerInventory : MonoBehaviour
     {
         _hp += hp;
         _healthUI.AddPoint(_hp);
+        _audio.MakeSound(_addHpAudio);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -77,5 +85,6 @@ public class PlayerInventory : MonoBehaviour
         _points += po;
         _pointsUI.AddPoint(_points);
         _spawner.AddPoints(_points);
+        _audio.MakeSound(_pointAudio);
     }
 }

@@ -19,6 +19,11 @@ public abstract class BaseAbility : MonoBehaviour, IPointerEnterHandler, IPointe
     [SerializeField] int[] waitTime = new int[6];
     [SerializeField] int[] _timeAbility = new int[6];
 
+    [Space(10)]
+    [Header("Audio")]
+    [SerializeField] AudioComponent _audio;
+    [SerializeField] AudioClip _on, _off;
+
     bool _isActive = true;
     Color32 _baseColor;
 
@@ -40,6 +45,8 @@ public abstract class BaseAbility : MonoBehaviour, IPointerEnterHandler, IPointe
     {
         if (_isActive == false)
             return;
+
+        _audio.MakeSound(_on);
 
         _isActive = false;
         _button.enabled = false;
@@ -66,6 +73,7 @@ public abstract class BaseAbility : MonoBehaviour, IPointerEnterHandler, IPointe
     protected virtual void OnClick() { }
     protected virtual void OnDisactivate() 
     {
+        _audio.MakeSound(_off);
         _particle.SetActive(false);
     }
 

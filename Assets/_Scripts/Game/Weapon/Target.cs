@@ -8,9 +8,19 @@ public class Target : MonoBehaviour
     [SerializeField] Weapon _weapon;
     [SerializeField] Animator _anim;
 
+    [Space(20)]
+    [Header("Sounds")]
+    [SerializeField] AudioComponent _audio;
+    [SerializeField] AudioClip _onShootAudio, _onCantShootAudio, _onUnLimited;
+
     public void MakeUnLimited(bool isUn)
     {
         _weapon.MakeUnlimited(isUn);
+
+        if (isUn)
+            _audio.MakeSound(_onUnLimited, true);
+        else
+            _audio.Stop();        
     }
     public Vector3 GetPosition()
     {
@@ -42,11 +52,13 @@ public class Target : MonoBehaviour
     #region OnShoot
     private void OnShoot()
     {
+        _audio.MakeSound(_onShootAudio);
         _anim.SetTrigger("shoot");
     }
 
     private void OnCantShoot()
     {
+        _audio.MakeSound(_onCantShootAudio);
         _anim.SetTrigger("not shoot");
     }
     #endregion
