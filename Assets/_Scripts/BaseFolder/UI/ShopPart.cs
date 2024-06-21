@@ -11,6 +11,11 @@ public class ShopPart : MonoBehaviour
     [SerializeField] Cost _cost;
 
     [SerializeField] UnityEvent OnClickEvent;
+
+    [Space(10)]
+    [Header("Audio")]
+    [SerializeField] AudioComponent _audio;
+    [SerializeField] AudioClip _buy, _cantbuy;
     
     private int _currentPoints;
     private Color _currentColor;
@@ -43,6 +48,7 @@ public class ShopPart : MonoBehaviour
 
         if (PlayerSave.CheakMoneyEnought(cost))
         {
+            _audio.MakeSound(_buy);
             PlayerSave.RemoveMoney(cost);
             OnClickEvent?.Invoke();
             _currentPoints++;
@@ -50,6 +56,7 @@ public class ShopPart : MonoBehaviour
         }
         else
         {
+            _audio.MakeSound(_cantbuy);
             Debug.Log("not enought money");
             MakeAnimation();
         }
