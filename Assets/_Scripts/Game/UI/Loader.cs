@@ -8,7 +8,8 @@ public class Loader : MonoBehaviour
     [SerializeField] TextMeshProUGUI _text;
     [SerializeField] TextMeshProUGUI _textAdvise;
     [SerializeField] string[] _str;
-    [SerializeField] TranslationText[] _translationTexts; 
+    [SerializeField] TranslationText[] _translationTexts;
+
     int _count;
 
     void Start()

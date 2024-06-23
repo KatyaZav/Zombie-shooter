@@ -412,8 +412,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _audio: {fileID: 50742936}
-  _buy: {fileID: 0}
-  _cantbuy: {fileID: 0}
+  _buy: {fileID: 8300000, guid: 986acb7775c3d3d4e90f9e365edd7eb4, type: 3}
+  _cantbuy: {fileID: 8300000, guid: bbbcf34aafc6e444c85e838eecaab865, type: 3}
 --- !u!114 &50742936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -660,8 +660,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _audio: {fileID: 53789659}
-  _buy: {fileID: 0}
-  _cantbuy: {fileID: 0}
+  _buy: {fileID: 8300000, guid: 986acb7775c3d3d4e90f9e365edd7eb4, type: 3}
+  _cantbuy: {fileID: 8300000, guid: bbbcf34aafc6e444c85e838eecaab865, type: 3}
 --- !u!114 &53789659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6400,8 +6400,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _audio: {fileID: 1298905480}
-  _buy: {fileID: 0}
-  _cantbuy: {fileID: 0}
+  _buy: {fileID: 8300000, guid: 986acb7775c3d3d4e90f9e365edd7eb4, type: 3}
+  _cantbuy: {fileID: 8300000, guid: bbbcf34aafc6e444c85e838eecaab865, type: 3}
 --- !u!114 &1298905480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6935,8 +6935,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _audio: {fileID: 1469969595}
-  _buy: {fileID: 0}
-  _cantbuy: {fileID: 0}
+  _buy: {fileID: 8300000, guid: 986acb7775c3d3d4e90f9e365edd7eb4, type: 3}
+  _cantbuy: {fileID: 8300000, guid: bbbcf34aafc6e444c85e838eecaab865, type: 3}
 --- !u!114 &1469969595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7609,8 +7609,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _audio: {fileID: 1558339967}
-  _buy: {fileID: 0}
-  _cantbuy: {fileID: 0}
+  _buy: {fileID: 8300000, guid: 986acb7775c3d3d4e90f9e365edd7eb4, type: 3}
+  _cantbuy: {fileID: 8300000, guid: bbbcf34aafc6e444c85e838eecaab865, type: 3}
 --- !u!114 &1558339967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7857,8 +7857,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _audio: {fileID: 1567619733}
-  _buy: {fileID: 0}
-  _cantbuy: {fileID: 0}
+  _buy: {fileID: 8300000, guid: 986acb7775c3d3d4e90f9e365edd7eb4, type: 3}
+  _cantbuy: {fileID: 8300000, guid: bbbcf34aafc6e444c85e838eecaab865, type: 3}
 --- !u!114 &1567619733
 MonoBehaviour:
   m_ObjectHideFlags: 0

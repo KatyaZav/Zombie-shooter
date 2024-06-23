@@ -9,6 +9,9 @@ public class Bootstrap : MonoBehaviour
     [SerializeField] PlayerInventory _inventory;
     [SerializeField] Spawner _spawner;
 
+    [SerializeField] AudioComponent _audio;
+    [SerializeField] AudioClip _start;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,5 +23,7 @@ public class Bootstrap : MonoBehaviour
         _weapon.Init();
         _inventory.Init();
         _spawner.Init();
+
+        _audio.MakeSound(_start);
     }
 }
