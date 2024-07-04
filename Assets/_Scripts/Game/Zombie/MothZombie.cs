@@ -32,7 +32,7 @@ public class MothZombie : BaseZombie
             //Instantiate(_sprite, other.transform.position, Quaternion.identity);
             //Debug.Log("Destroy  bulet");
             Destroy(other.gameObject);
-            RemoveHp(1);
+            RemoveHp(PlayerInventory.Damage);
         }
     }
 }

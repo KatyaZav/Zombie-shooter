@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
+    public bool wasGetted;
+
     [SerializeField] Rigidbody _rb;
     [SerializeField] float _speed;
     [SerializeField] GameObject _sprite;
@@ -16,7 +18,7 @@ public class bullet : MonoBehaviour
         if (transform.position.z <= 29)
         {
             var o = Instantiate(_sprite, transform.position, transform.rotation);
-            Destroy(o, 0.2f);
+            Destroy(o);
         }
     }
 }

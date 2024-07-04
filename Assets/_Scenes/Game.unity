@@ -22949,13 +22949,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.403
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 174
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -25528,7 +25528,7 @@ MonoBehaviour:
   _pointsUI: {fileID: 1594656883}
   _spawner: {fileID: 1758722127}
   _textPoints: {fileID: 55765867}
-  _damageUpd: 0100000002000000030000000400000005000000
+  _damageUpd: 050000000700000008000000090000000a000000
   _audio: {fileID: 1853635737}
   _loseAudio: {fileID: 0}
   _pointAudio: {fileID: 0}

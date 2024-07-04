@@ -13,8 +13,14 @@ public class ZombiePart : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Bullet"))
+        var ot = other.GetComponent<bullet>();
+
+        if (ot != null)
         {
+            if (ot.wasGetted == true)
+                return;
+
+            ot.wasGetted = true;
             //Debug.Log("Destroy  bulet");
             //nstantiate(_sprite, other.transform.position, Quaternion.identity);
             Destroy(other.gameObject);

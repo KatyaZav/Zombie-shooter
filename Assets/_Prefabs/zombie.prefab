@@ -1461,7 +1461,7 @@ MonoBehaviour:
   _size: 0
   _anim: {fileID: 6513098747975550073}
   _hpSlider: {fileID: 8642819519201545}
-  _maxHealth: 22
+  _maxHealth: 16
   _damage: 1
   _parts:
   - {fileID: 724553104891433262}

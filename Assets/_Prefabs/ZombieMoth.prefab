@@ -345,7 +345,7 @@ MonoBehaviour:
   _anim: {fileID: 7503991253066072895}
   _hpSlider: {fileID: 5692275259587631709}
   _maxHealth: 3
-  _damage: 0
+  _damage: 1
 --- !u!114 &6385098444550618752
 MonoBehaviour:
   m_ObjectHideFlags: 0
