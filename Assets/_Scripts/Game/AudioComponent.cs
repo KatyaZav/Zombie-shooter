@@ -34,5 +34,6 @@ public class AudioComponent : MonoBehaviour
     private void OnValidate()
     {
         _sorce = GetComponent<AudioSource>();
+        _sorce.playOnAwake = false;
     }
 }
