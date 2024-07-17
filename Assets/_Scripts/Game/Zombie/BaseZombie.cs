@@ -1,9 +1,22 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class BaseZombie : MonoBehaviour
 {
-    public static Action<int, BaseZombie> ZombieKilledEvent;
+    private static UnityEvent<int, BaseZombie> zombieKilledEvent = new UnityEvent<int, BaseZombie>();
+
+    public static event Action<int, BaseZombie> ZombieKilledEvent
+    {
+        add
+        {
+            zombieKilledEvent?.AddListener(value.Invoke);
+        }
+        remove
+        {
+            zombieKilledEvent?.RemoveListener(value.Invoke);
+        }
+    }
 
     [SerializeField] protected int _deathCost = 1;
     [SerializeField] protected float _speed = 1;
@@ -78,7 +91,7 @@ public abstract class BaseZombie : MonoBehaviour
         _wasAttacked = true;
         inventory.Hit(_damage);
 
-        ZombieKilledEvent?.Invoke(_deathCost, this);
+        zombieKilledEvent?.Invoke(_deathCost, this);
         _isStop = true;
         Invoke("Disable", 1f);
     }
@@ -89,12 +102,19 @@ public abstract class BaseZombie : MonoBehaviour
     }
     protected virtual void OnDead() 
     {
-        ZombieKilledEvent?.Invoke(_deathCost, this);
-        _hpSlider.Deactivate();
         _isDead = true;
+        zombieKilledEvent?.Invoke(_deathCost, this);
+        //_hpSlider.Deactivate();
+        Debug.Log("zombie start dead");
+    }
+    
+    public void DeactivateZombie()
+    {
         gameObject.SetActive(false);
         gameObject.transform.localPosition = Vector3.zero;
+        Debug.Log("zombie dead");
     }
+
     protected void RemoveHp(float hp) 
     {
         _health -= hp;

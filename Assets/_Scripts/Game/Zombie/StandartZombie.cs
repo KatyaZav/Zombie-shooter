@@ -47,7 +47,7 @@ public class StandartZombie : BaseZombie
     {
         foreach (var e in _parts)
         {
-            e.DamagePartEvent += RemoveHp;
+            e.DamagePartEvent -= RemoveHp;
         }
     }
 }

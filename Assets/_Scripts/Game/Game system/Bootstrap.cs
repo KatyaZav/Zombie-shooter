@@ -24,6 +24,7 @@ public class Bootstrap : MonoBehaviour
         _inventory.Init();
         _spawner.Init();
 
+        _audio.TryInit();
         _audio.MakeSound(_start);
     }
 }

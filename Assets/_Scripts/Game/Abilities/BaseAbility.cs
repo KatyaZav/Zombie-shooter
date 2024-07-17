@@ -40,6 +40,8 @@ public abstract class BaseAbility : MonoBehaviour, IPointerEnterHandler, IPointe
 
         _timer.SetTime(_timeRecharge + _timeActive);
         _baseColor = _image.color;
+
+        _audio.TryInit();
     }
     public void Activate()
     {

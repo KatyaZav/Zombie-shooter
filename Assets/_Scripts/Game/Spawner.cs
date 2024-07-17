@@ -101,7 +101,7 @@ public class Spawner : MonoBehaviour
 
         BaseZombie zombie;
 
-        if (Random.Range(0f,8f) <= 0.6f)
+        if (Random.Range(0,16) <= 1)
         {
             var zombie1 = Instantiate(_flyPrefab, transform);
             zombie1.transform.localPosition = vector;
@@ -122,6 +122,7 @@ public class Spawner : MonoBehaviour
 
     private void RemoveZombie(int i, BaseZombie zombie)
     {
+        zombie.DeactivateZombie();
         _zombiesPool.ReturnObject(zombie);
         _zombies.Remove(zombie);
     }

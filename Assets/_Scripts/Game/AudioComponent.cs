@@ -6,6 +6,7 @@ using UnityEngine;
 public class AudioComponent : MonoBehaviour
 {    
     private AudioSource _sorce;
+    private bool wasInit = false;
 
     public void ChangePitch()
     {
@@ -19,6 +20,9 @@ public class AudioComponent : MonoBehaviour
 
     public void MakeSound(AudioClip clip, bool isLoop = false)
     {
+        if (_sorce == null)
+            throw new System.Exception("Audio Source is null");
+
         _sorce.mute = PlayerSave.MusicOn == false;
 
         if (_sorce.isPlaying && PlayerSave.MusicOn)
@@ -29,6 +33,15 @@ public class AudioComponent : MonoBehaviour
         _sorce.loop = isLoop;
         _sorce.clip = clip;
         _sorce.Play();
+    }
+
+    public void TryInit()
+    {
+        if (wasInit)
+            return;
+
+        OnValidate();
+        wasInit = true;
     }
 
     private void OnValidate()

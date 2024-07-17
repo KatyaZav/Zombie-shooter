@@ -33,6 +33,7 @@ public class Target : MonoBehaviour
     private void Start()
     {
         Instance = this;
+        _audio.TryInit();
     }
     void Update()
     {

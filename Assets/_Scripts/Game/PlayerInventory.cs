@@ -29,6 +29,7 @@ public class PlayerInventory : MonoBehaviour
 
         _healthUI.Init(_hp);
         _pointsUI.Init(_points);
+        _audio.TryInit();
 
         BaseZombie.ZombieKilledEvent += AddPoints;
     }

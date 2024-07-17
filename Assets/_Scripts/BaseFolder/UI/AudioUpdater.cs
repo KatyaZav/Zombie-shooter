@@ -7,12 +7,6 @@ public class AudioUpdater : MonoBehaviour
     [SerializeField] Image _image;
     [SerializeField] Sprite[] sprites;
 
-    private void OnEnable()
-    {
-        if (YG.YandexGame.SDKEnabled)
-            Init();
-    }
-
     public void Init()
     {
         _button.onClick.AddListener(OnClick);

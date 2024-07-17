@@ -26,6 +26,7 @@ public class ShopPart : MonoBehaviour
         _currentPoints = Mathf.Clamp(points, 0, _slider.GetMaxSliderValue());
 
         UpdateSlider();
+        _audio.TryInit();
     }
 
     public void UpdateSlider()
