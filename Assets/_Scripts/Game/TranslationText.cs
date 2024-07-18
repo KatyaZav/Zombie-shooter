@@ -7,7 +7,7 @@ public class TranslationText
 {
     [SerializeField] string _rus;
     [SerializeField] string _en;
-    [SerializeField] string _tur;
+    //[SerializeField] string _tur;
 
     public string GetText(string language)
     {
@@ -17,8 +17,8 @@ public class TranslationText
         if (language == "en")
             return _en;
 
-        if (language == "tr")
-            return _tur;
+        //if (language == "tr")
+        //    return _tur;
 
         return "error";
     }

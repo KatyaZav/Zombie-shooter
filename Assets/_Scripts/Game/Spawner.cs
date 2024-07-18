@@ -140,10 +140,15 @@ public class Spawner : MonoBehaviour
             yield return new WaitForSeconds(perTime);
             a += perTime;
 
-            foreach (var e in _zombies)
+            try
             {
-                e.Poison(damage);
+                foreach (var e in _zombies)
+                {
+                    e.Poison(damage);
+                }
             }
+            catch (System.Exception e) {}
+
         }
     }
 }
