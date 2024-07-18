@@ -105,14 +105,14 @@ public abstract class BaseZombie : MonoBehaviour
         _isDead = true;
         zombieKilledEvent?.Invoke(_deathCost, this);
         //_hpSlider.Deactivate();
-        Debug.Log("zombie start dead");
+        //Debug.Log("zombie start dead");
     }
     
     public void DeactivateZombie()
     {
         gameObject.SetActive(false);
         gameObject.transform.localPosition = Vector3.zero;
-        Debug.Log("zombie dead");
+        //Debug.Log("zombie dead");
     }
 
     protected void RemoveHp(float hp) 
