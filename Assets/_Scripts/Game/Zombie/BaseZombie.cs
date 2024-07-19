@@ -64,7 +64,10 @@ public abstract class BaseZombie : MonoBehaviour
         gameObject.SetActive(true);
         _anim.SetBool("walk", true);
 
+        _isStop = false;
         _isDead = false;
+        _wasAttacked = false;
+
         _health = _maxHealth;
         gameObject.transform.localPosition = pos;
         gameObject.transform.localScale = Vector3.zero;
@@ -104,6 +107,7 @@ public abstract class BaseZombie : MonoBehaviour
     {
         _isDead = true;
         zombieKilledEvent?.Invoke(_deathCost, this);
+        DeactivateZombie();
         //_hpSlider.Deactivate();
         //Debug.Log("zombie start dead");
     }
@@ -136,7 +140,8 @@ public abstract class BaseZombie : MonoBehaviour
 
     private void Disable()
     {
-        gameObject.SetActive(false);        
+        gameObject.SetActive(false);
+        gameObject.transform.localPosition = Vector3.zero;
     }
     private void ChangeColor()
     {

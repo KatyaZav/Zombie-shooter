@@ -43,7 +43,7 @@ public class StandartZombie : BaseZombie
         return koef;
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         foreach (var e in _parts)
         {

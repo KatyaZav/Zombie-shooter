@@ -17,6 +17,11 @@ public abstract class Weapon : MonoBehaviour
     private int _currentCartridges;
     private bool _isUnLimited;
 
+    public bool CheckCanShoot()
+    {
+        return _currentCartridges > 0;
+    }
+
     public virtual void Init() 
     {
         LoadData();

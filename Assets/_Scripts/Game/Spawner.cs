@@ -122,7 +122,7 @@ public class Spawner : MonoBehaviour
 
     private void RemoveZombie(int i, BaseZombie zombie)
     {
-        zombie.DeactivateZombie();
+        //zombie.DeactivateZombie();
         _zombiesPool.ReturnObject(zombie);
         _zombies.Remove(zombie);
     }

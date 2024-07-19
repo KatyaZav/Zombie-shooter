@@ -13,6 +13,11 @@ public class Target : MonoBehaviour
     [SerializeField] AudioComponent _audio;
     [SerializeField] AudioClip _onShootAudio, _onCantShootAudio, _onUnLimited;
 
+    public bool CheackCanShoot()
+    {
+        return _weapon.CheckCanShoot();
+    }
+
     public void MakeUnLimited(bool isUn)
     {
         _weapon.MakeUnlimited(isUn);

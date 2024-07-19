@@ -71,6 +71,10 @@ public abstract class BaseAbility : MonoBehaviour, IPointerEnterHandler, IPointe
     {
         _helpZone.SetActive(false);
     }
+    protected void MakeSound(AudioClip _clip)
+    {
+        _audio.MakeSound(_clip);
+    }
 
     protected virtual void OnClick() { }
     protected virtual void OnDisactivate() 
