@@ -25321,9 +25321,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1535797865}
-        m_TargetAssemblyTypeName: PauseController, Assembly-CSharp
-        m_MethodName: ToMenu
+      - m_Target: {fileID: 1853635734}
+        m_TargetAssemblyTypeName: PlayerInventory, Assembly-CSharp
+        m_MethodName: MakeGameOver
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

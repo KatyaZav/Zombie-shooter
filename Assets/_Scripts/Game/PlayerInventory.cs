@@ -41,21 +41,26 @@ public class PlayerInventory : MonoBehaviour
 
         if (_hp < 0)
         {
-            _audio.MakeSound(_loseAudio);
-            float a, b;
-            PlayerSave.GetMinAndMax(out a, out b);
-
-            int money = Mathf.RoundToInt(_points * Random.Range(a, b));
-            Debug.Log("Getted money " + money);
-            PlayerSave.AddMoney(money);
-            PlayerSave.SetRecord(_points);
-
-            PlayerSave.AddGameCount();
-            Lose.SetMoney(money);
-            Lose.gameObject.SetActive(true);
+            MakeGameOver();
         }
 
         _healthUI.RemovePoint(_hp);
+    }
+
+    public void MakeGameOver()
+    {
+        _audio.MakeSound(_loseAudio);
+        float a, b;
+        PlayerSave.GetMinAndMax(out a, out b);
+
+        int money = Mathf.RoundToInt(_points * Random.Range(a, b));
+        Debug.Log("Getted money " + money);
+        PlayerSave.AddMoney(money);
+        PlayerSave.SetRecord(_points);
+
+        PlayerSave.AddGameCount();
+        Lose.SetMoney(money);
+        Lose.gameObject.SetActive(true);
     }
 
     public void AddHealth(int hp)

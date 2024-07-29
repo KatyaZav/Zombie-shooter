@@ -9,6 +9,7 @@ public class PlayerUI : MonoBehaviour
     public void Init(float hp)
     {
         _text.text = hp.ToString();
+        _anim = GetComponent<Animator>();
     }
 
     public void AddPoint(float hp)

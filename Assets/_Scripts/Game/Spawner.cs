@@ -101,7 +101,7 @@ public class Spawner : MonoBehaviour
 
         BaseZombie zombie;
 
-        if (Random.Range(0,16) <= 1)
+        if (Random.Range(0,35) <= 1)
         {
             var zombie1 = Instantiate(_flyPrefab, transform);
             zombie1.transform.localPosition = vector;

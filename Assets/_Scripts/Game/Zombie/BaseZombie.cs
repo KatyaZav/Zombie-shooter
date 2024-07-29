@@ -4,19 +4,7 @@ using UnityEngine.Events;
 
 public abstract class BaseZombie : MonoBehaviour
 {
-    private static UnityEvent<int, BaseZombie> zombieKilledEvent = new UnityEvent<int, BaseZombie>();
-
-    public static event Action<int, BaseZombie> ZombieKilledEvent
-    {
-        add
-        {
-            zombieKilledEvent?.AddListener(value.Invoke);
-        }
-        remove
-        {
-            zombieKilledEvent?.RemoveListener(value.Invoke);
-        }
-    }
+    public static Action<int, BaseZombie> ZombieKilledEvent;
 
     [SerializeField] protected int _deathCost = 1;
     [SerializeField] protected float _speed = 1;
@@ -94,7 +82,7 @@ public abstract class BaseZombie : MonoBehaviour
         _wasAttacked = true;
         inventory.Hit(_damage);
 
-        zombieKilledEvent?.Invoke(_deathCost, this);
+        ZombieKilledEvent?.Invoke(_deathCost, this);
         _isStop = true;
         Invoke("Disable", 1f);
     }
@@ -106,7 +94,7 @@ public abstract class BaseZombie : MonoBehaviour
     protected virtual void OnDead() 
     {
         _isDead = true;
-        zombieKilledEvent?.Invoke(_deathCost, this);
+        ZombieKilledEvent?.Invoke(_deathCost, this);
         DeactivateZombie();
         //_hpSlider.Deactivate();
         //Debug.Log("zombie start dead");
