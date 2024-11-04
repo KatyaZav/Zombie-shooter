@@ -24925,7 +24925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52abe4a27a66a674ebcab1787eab6b36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cartridges: 5
+  _cartridges: 50
   _rechargeTime: 3
   _cartridge: {fileID: 3490752798063905953, guid: cddbcd950c6f07640a5c9f1ca10399f6, type: 3}
   _timer: {fileID: 939951800}
@@ -25970,6 +25970,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8d826bfad716b4391b298880905ba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxZombieCount: 13
+  _maxMothCount: 2
   _zombies: []
   _left: {fileID: 1217346767}
   _right: {fileID: 1426161766}

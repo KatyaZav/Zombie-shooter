@@ -41,6 +41,9 @@ public abstract class BaseZombie : MonoBehaviour
 
     public void MakeStop(bool isTrue)
     {
+        if (_anim == null)
+            return;
+
         _isStop = isTrue;
         _anim.SetBool("walk", _isStop == false);
     }

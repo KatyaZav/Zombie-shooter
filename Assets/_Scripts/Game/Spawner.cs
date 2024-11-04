@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    [SerializeField] private int _maxZombieCount;
+    [SerializeField] private int _maxMothCount;
+
     [SerializeField] List<BaseZombie> _zombies = new List<BaseZombie>();
     [SerializeField] Transform _left, _right;
     [SerializeField] GameObject _zombiePrefab;
@@ -14,6 +17,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] float _maxScore;
 
     ObjectPool<BaseZombie> _zombiesPool;
+    ObjectPool<MothZombie> _mothPool;
     bool wasInit;
 
     float min = 1.5f;
@@ -59,7 +63,9 @@ public class Spawner : MonoBehaviour
         else if (PlayerSave.GameCount < 20)
             max = 3;
 
-        _zombiesPool = new ObjectPool<BaseZombie>(_zombiePrefab);
+        _zombiesPool = new ObjectPool<BaseZombie>(_zombiePrefab, _maxZombieCount);
+        _mothPool = new ObjectPool<MothZombie>(_flyPrefab, _maxMothCount);
+
         StartCoroutine(SpawnInTime(true));
 
         BaseZombie.ZombieKilledEvent += RemoveZombie;
@@ -84,28 +90,34 @@ public class Spawner : MonoBehaviour
     private IEnumerator SpawnInTime(bool needFirst)
     {
         if (needFirst)
-            _zombies.Add(ChooseZombie());     
+            _zombies.Add(ChooseZombie(1));     
         
         while (true)
         {
-
-
             yield return new WaitForSeconds(_timeInSpawn);
-            _zombies.Add(ChooseZombie());            
+
+            if (Random.Range(0, 100)  > 5)
+            {
+                if (_zombiesPool.CanGet())
+                    _zombies.Add(ChooseZombie(1));
+            }
+            else
+            {
+                if (_mothPool.CanGet())
+                    _zombies.Add(ChooseZombie(0));       
+            }
         }
     }
 
-    private BaseZombie ChooseZombie()
+    private BaseZombie ChooseZombie(int a)
     {
         Vector3 vector = new Vector3(GenerateRandomXPosition(), 0, 0);
 
         BaseZombie zombie;
 
-        if (Random.Range(0,35) <= 1)
+        if (a == 0)
         {
-            var zombie1 = Instantiate(_flyPrefab, transform);
-            zombie1.transform.localPosition = vector;
-            var zombieMoth = zombie1.GetComponent<MothZombie>();
+            var zombieMoth = _mothPool.GetObject(transform);
             zombieMoth.Init(vector, _inventory);
 
             zombie = zombieMoth;
