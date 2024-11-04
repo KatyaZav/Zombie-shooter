@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 public abstract class BaseAbility : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    [SerializeField] int index;
+    [SerializeField] protected int index;
     [SerializeField] protected Image _image;
     [SerializeField] protected float _timeActive;
     [SerializeField] protected float _timeRecharge;
