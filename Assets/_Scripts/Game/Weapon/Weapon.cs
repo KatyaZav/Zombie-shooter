@@ -35,7 +35,7 @@ public abstract class Weapon : MonoBehaviour
     }
     public bool Shoot() 
     {
-        if (_canAttack == false)
+        if (_canAttack == false && _isUnLimited == false)
             return false;
 
         if (_isUnLimited)
