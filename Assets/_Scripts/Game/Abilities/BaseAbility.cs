@@ -48,6 +48,7 @@ public abstract class BaseAbility : MonoBehaviour, IPointerEnterHandler, IPointe
         if (_isActive == false)
             return;
 
+        Debug.Log("Activated " + gameObject.name);
         _audio.MakeSound(_on);
 
         _isActive = false;

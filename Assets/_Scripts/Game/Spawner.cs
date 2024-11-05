@@ -44,7 +44,10 @@ public class Spawner : MonoBehaviour
     public void StopAllZombies(bool isTrue)
     {
         foreach (var e in _zombies)
+        {
+            Debug.Log("Stop " + e.name);
             e.MakeStop(isTrue);
+        }
     }
 
     public void PoisonAllZombies(float damage, float longTime, float perTime = 1f)
@@ -96,7 +99,7 @@ public class Spawner : MonoBehaviour
         {
             yield return new WaitForSeconds(_timeInSpawn);
 
-            if (Random.Range(0, 100)  > 5)
+            if (Random.Range(0, (int)(300 / _timeInSpawn))  > 5)
             {
                 if (_zombiesPool.CanGet())
                     _zombies.Add(ChooseZombie(1));

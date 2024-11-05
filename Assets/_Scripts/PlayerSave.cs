@@ -15,23 +15,23 @@ public class PlayerSave
     {
         if (GameCount < 5)
         {
-            a = 1.1f;
-            b = 2.2f;
+            a = 0.4f;
+            b = 1f;
         }
         else if (GameCount < 15)
         {
-            a = 1.3f;
-            b = 2.5f;
+            a = 0.7f;
+            b = 1.1f;
         }
         else if (GameCount < 35)
         {
-            a = 1.5f;
-            b = 2.7f;
+            a = 0.8f;
+            b = 1.11f;
         }
         else
         {
-            a = 1.7f;
-            b = 2.9f;
+            a = 0.9f;
+            b = 1.12f;
         }
     }
 

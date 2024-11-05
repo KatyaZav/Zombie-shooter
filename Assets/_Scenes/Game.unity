@@ -24191,7 +24191,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4278233902
   _particle: {fileID: 822861822}
-  waitTime: 190000001600000014000000130000001200000011000000100000000f000000
+  waitTime: 3c00000037000000320000002d00000028000000230000001e00000019000000
   _timeAbility: 0300000004000000040000000500000005000000060000000600000006000000
   _audio: {fileID: 1385934026}
   _on: {fileID: 8300000, guid: 5a03d95ef20b54f4ab26d1375f5ead96, type: 3}
@@ -24200,14 +24200,14 @@ MonoBehaviour:
   _inv: {fileID: 0}
   _damage: 1
   _damages:
-  - 0.4
-  - 0.5
-  - 0.7
-  - 0.7
-  - 0.9
-  - 1
-  - 1
-  - 1.2
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
 --- !u!114 &1385934026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25286,7 +25286,7 @@ MonoBehaviour:
   _timer: {fileID: 939951800}
   _cartridgeText: {fileID: 1865479115}
   _reload: 0700000006000000050000000400000003000000
-  _cartridgesUpd: 0700000008000000090000000a0000000b0000000c0000000d0000000f000000
+  _cartridgesUpd: 08000000090000000a0000000b0000000c0000000d000000
 --- !u!114 &1572738806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26667,7 +26667,7 @@ MonoBehaviour:
   _pointsUI: {fileID: 1594656883}
   _spawner: {fileID: 1758722127}
   _textPoints: {fileID: 55765867}
-  _damageUpd: 050000000700000008000000090000000a000000
+  _damageUpd: 0a0000000c0000000f0000001400000019000000
   _audio: {fileID: 1853635737}
   _loseAudio: {fileID: 8300000, guid: 55fe242041f7ad24d938e7d186a92882, type: 3}
   _pointAudio: {fileID: 8300000, guid: 85734be280e9e654b8ef45528851519c, type: 3}

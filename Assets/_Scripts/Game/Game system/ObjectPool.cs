@@ -16,7 +16,7 @@ public class ObjectPool <T>
         _currentCount = 0;
     }
 
-    public bool CanGet() => _currentCount < _maxCount;
+    public bool CanGet() => _currentCount < _maxCount - 1;
     
     public T GetObject(Transform transform)
     {
