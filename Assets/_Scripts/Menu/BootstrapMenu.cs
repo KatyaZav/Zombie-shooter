@@ -17,6 +17,8 @@ public class BootstrapMenu : MonoBehaviour
 
     //[SerializeField] AddIcons _icon;
 
+    [SerializeField] private int _buildVersion;
+
     void Start()
     {
         if (YandexGame.SDKEnabled)
@@ -32,6 +34,8 @@ public class BootstrapMenu : MonoBehaviour
 
     void Init()
     {
+        Debug.Log("Build version " + _buildVersion);
+
         if (YandexGame.EnvironmentData.payload == "DeleteSaves")
         {
             YandexGame.ResetSaveProgress();

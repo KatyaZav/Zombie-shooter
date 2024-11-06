@@ -4354,6 +4354,7 @@ MonoBehaviour:
     _en: 'Record:'
   left: {fileID: 1677445240}
   center: {fileID: 1521370786}
+  _buildVersion: 10
 --- !u!4 &731430096
 Transform:
   m_ObjectHideFlags: 0
