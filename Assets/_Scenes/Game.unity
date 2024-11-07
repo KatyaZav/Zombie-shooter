@@ -24192,7 +24192,7 @@ MonoBehaviour:
     rgba: 4278233902
   _particle: {fileID: 822861822}
   waitTime: 3c00000037000000320000002d00000028000000230000001e00000019000000
-  _timeAbility: 0300000004000000040000000500000005000000060000000600000006000000
+  _timeAbility: 0300000004000000040000000500000005000000050000000600000006000000
   _audio: {fileID: 1385934026}
   _on: {fileID: 8300000, guid: 5a03d95ef20b54f4ab26d1375f5ead96, type: 3}
   _off: {fileID: 8300000, guid: bc93d461b4ea2a341868f5ef309538cf, type: 3}
@@ -24206,8 +24206,8 @@ MonoBehaviour:
   - 5
   - 6
   - 7
-  - 8
-  - 9
+  - 10
+  - 11
 --- !u!114 &1385934026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26513,6 +26513,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8d826bfad716b4391b298880905ba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timing:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 5
+      inSlope: -0.15240741
+      outSlope: -0.15240741
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.0679412
+    - serializedVersion: 3
+      time: 2
+      value: 3
+      inSlope: -0.053971063
+      outSlope: -0.053971063
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.063789845
+    - serializedVersion: 3
+      time: 100
+      value: 1.5
+      inSlope: -0.015306123
+      outSlope: -0.015306123
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   _maxZombieCount: 13
   _maxMothCount: 2
   _zombies: []

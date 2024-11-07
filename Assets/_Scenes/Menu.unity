@@ -4354,7 +4354,7 @@ MonoBehaviour:
     _en: 'Record:'
   left: {fileID: 1677445240}
   center: {fileID: 1521370786}
-  _buildVersion: 10
+  _buildVersion: 11
 --- !u!4 &731430096
 Transform:
   m_ObjectHideFlags: 0
@@ -7016,7 +7016,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 169.29, y: 189}
+  m_AnchoredPosition: {x: 169.28998, y: 189}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1403793689

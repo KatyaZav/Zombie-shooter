@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    [SerializeField] private AnimationCurve _timing;
     [SerializeField] private int _maxZombieCount;
     [SerializeField] private int _maxMothCount;
 
@@ -13,19 +14,22 @@ public class Spawner : MonoBehaviour
     [SerializeField] GameObject _flyPrefab;
     [SerializeField] PlayerInventory _inventory;
 
-    [Range(1.5f, 4), SerializeField] float _timeInSpawn;
+    [SerializeField] float _timeInSpawn;
     [SerializeField] float _maxScore;
 
     ObjectPool<BaseZombie> _zombiesPool;
     ObjectPool<MothZombie> _mothPool;
     bool wasInit;
 
-    float min = 1.5f;
-    float max = 4;
+    float max = 2;
+
+    bool _isStopped = false;
 
     public void AddPoints(int point)
     {
-        if (point == 0)
+        _timeInSpawn = _timing.Evaluate(Mathf.Clamp(point, 0, 100)) + max;
+
+        /*if (point == 0)
         {
             _timeInSpawn = 8;
             return;
@@ -38,14 +42,16 @@ public class Spawner : MonoBehaviour
         float k = -A / B;
         float b = -C / B;
 
-        _timeInSpawn = (k*point) + b;
+        _timeInSpawn = (k*point) + b;*/
     }
 
     public void StopAllZombies(bool isTrue)
     {
+        _isStopped = isTrue;
+
         foreach (var e in _zombies)
         {
-            Debug.Log("Stop " + e.name);
+            //Debug.Log("Stop " + e.name);
             e.MakeStop(isTrue);
         }
     }
@@ -60,11 +66,11 @@ public class Spawner : MonoBehaviour
         if (PlayerSave.GameCount < 2)
             max = 4;
         else if (PlayerSave.GameCount < 8)
-            max = 3.5f;
+            max = 2.5f;
         else if (PlayerSave.GameCount < 15)
-            max = 3.2f;
+            max = 1.5f;
         else if (PlayerSave.GameCount < 20)
-            max = 3;
+            max = 0.5f;
 
         _zombiesPool = new ObjectPool<BaseZombie>(_zombiePrefab, _maxZombieCount);
         _mothPool = new ObjectPool<MothZombie>(_flyPrefab, _maxMothCount);
@@ -99,15 +105,18 @@ public class Spawner : MonoBehaviour
         {
             yield return new WaitForSeconds(_timeInSpawn);
 
-            if (Random.Range(0, (int)(300 / _timeInSpawn))  > 5)
+            if (_isStopped == false)
             {
-                if (_zombiesPool.CanGet())
-                    _zombies.Add(ChooseZombie(1));
-            }
-            else
-            {
-                if (_mothPool.CanGet())
-                    _zombies.Add(ChooseZombie(0));       
+                if (Random.Range(0, (int)(400 / _timeInSpawn))  > 4)
+                {
+                    if (_zombiesPool.CanGet())
+                        _zombies.Add(ChooseZombie(1));
+                }
+                else
+                {
+                    if (_mothPool.CanGet())
+                        _zombies.Add(ChooseZombie(0));       
+                }
             }
         }
     }
