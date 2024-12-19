@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class bullet : MonoBehaviour
@@ -38,7 +39,10 @@ public class bullet : MonoBehaviour
             _wasDestroyed = true;
 
             damagable.TakeDamage(PlayerInventory.Damage);
-            OnDestroed(other.GetComponentInParent<BaseZombie>().transform);
+
+            var enemyBase = other.GetComponentInParent<BaseZombie>().transform;
+
+            OnDestroed(enemyBase == null ? other.transform : enemyBase.transform);
             Destroy(gameObject);
         }
     }
