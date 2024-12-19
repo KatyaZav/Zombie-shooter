@@ -1342,7 +1342,7 @@ Transform:
   m_GameObject: {fileID: 6519604305117935832}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.85, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8118917016336573891}
@@ -1459,10 +1459,6 @@ MonoBehaviour:
   - {fileID: 3200431152543660535}
   - {fileID: 3221923679684807281}
   _size: 0
-  _anim: {fileID: 6513098747975550073}
-  _hpSlider: {fileID: 8642819519201545}
-  _maxHealth: 50
-  _damage: 1
   _parts:
   - {fileID: 724553104891433262}
   - {fileID: 8480205076435877351}
@@ -1473,6 +1469,10 @@ MonoBehaviour:
   - {fileID: 6261103178035285049}
   - {fileID: 7468135575980909799}
   - {fileID: 6927711379356091441}
+  _anim: {fileID: 6513098747975550073}
+  _hpSlider: {fileID: 8642819519201545}
+  _maxHealth: 50
+  _damage: 1
   _items:
   - {fileID: 5579574975436293116}
   - {fileID: 5175361103481655235}
