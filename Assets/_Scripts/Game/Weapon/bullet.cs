@@ -40,7 +40,7 @@ public class bullet : MonoBehaviour
 
             damagable.TakeDamage(PlayerInventory.Damage);
 
-            var enemyBase = other.GetComponentInParent<BaseZombie>().transform;
+            var enemyBase = other.GetComponentInParent<BaseZombie>();
 
             OnDestroed(enemyBase == null ? other.transform : enemyBase.transform);
             Destroy(gameObject);
