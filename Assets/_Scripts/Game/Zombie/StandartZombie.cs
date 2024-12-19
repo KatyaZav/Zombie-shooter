@@ -4,19 +4,13 @@ using UnityEngine;
 
 public class StandartZombie : BaseZombie
 {
-    [SerializeField] ZombiePart[] _parts;
     [SerializeField] BaseItems[] _items;
 
     int _killCount = 0;
 
     public override void Init(Vector3 pos)
     {
-        base.Init(pos);
-
-        foreach (var e in _parts)
-        {
-            e.DamagePartEvent += RemoveHp;
-        }
+        base.Init(pos);       
 
         foreach (var e in _items)
         {
@@ -41,13 +35,5 @@ public class StandartZombie : BaseZombie
         koef = Mathf.Clamp(koef, 1, 10);
 
         return koef;
-    }
-
-    private void OnDisable()
-    {
-        foreach (var e in _parts)
-        {
-            e.DamagePartEvent -= RemoveHp;
-        }
     }
 }

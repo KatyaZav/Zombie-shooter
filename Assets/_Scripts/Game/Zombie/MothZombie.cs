@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MothZombie : BaseZombie, IDamageble
+public class MothZombie : BaseZombie
 {
     PlayerInventory _inventory;
     //[SerializeField] Sprite _sprite;

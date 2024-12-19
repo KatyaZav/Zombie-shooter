@@ -101,9 +101,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ea1e886b01c3a468d22f6701e93ea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wasGetted: 0
   _rb: {fileID: 2625304890600867520}
   _speed: 30
   _sprite: {fileID: 6216689663042714609, guid: e255492194fa36a4ba380bfa48d99fed, type: 3}
+  _destroyTime: 0.3
 --- !u!54 &2625304890600867520
 Rigidbody:
   m_ObjectHideFlags: 0

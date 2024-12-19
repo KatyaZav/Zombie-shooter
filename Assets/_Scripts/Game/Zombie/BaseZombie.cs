@@ -14,6 +14,7 @@ public abstract class BaseZombie : MonoBehaviour
     [SerializeField] Gradient _gradient;
     [SerializeField] SpriteRenderer[] _partsSprites;
     [SerializeField, Range(0.8f, 1)] float _size;
+    [SerializeField] ZombiePart[] _parts;
 
     [Space(20)]
 
@@ -65,6 +66,11 @@ public abstract class BaseZombie : MonoBehaviour
         
         _hpSlider.Deactivate();
         _hpSlider.Init(_health);
+
+        foreach (var e in _parts)
+        {
+            e.DamagePartEvent += RemoveHp;
+        }
     }
 
     public void AddDamage(int count = 1)
@@ -127,6 +133,14 @@ public abstract class BaseZombie : MonoBehaviour
 
         if (_isStop == false)
             Move();
+    }
+
+    private void OnDisable()
+    {
+        foreach (var e in _parts)
+        {
+            e.DamagePartEvent -= RemoveHp;
+        }
     }
 
     private void Disable()

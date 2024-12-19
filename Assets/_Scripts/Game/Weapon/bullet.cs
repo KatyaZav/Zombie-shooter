@@ -9,8 +9,11 @@ public class bullet : MonoBehaviour
     [SerializeField] GameObject _sprite;
     [SerializeField] float _destroyTime = 1;
 
+    bool _wasDestroyed;
+
     void Start()
     {
+        _wasDestroyed = false;
         _rb.AddForce(Vector3.forward*_speed*2, ForceMode.VelocityChange);
     }
 
@@ -18,19 +21,24 @@ public class bullet : MonoBehaviour
     {
         if (transform.position.z <= 29)
         {
-            var o = Instantiate(_sprite, transform.position, transform.rotation, enemy.parent);
+            var o = Instantiate(_sprite, transform.position, transform.rotation, enemy);
             Destroy(o, _destroyTime);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        if (_wasDestroyed == true)
+            return;
+
         IDamageble damagable = other.GetComponent<IDamageble>();
 
         if (damagable != null)
         {
+            _wasDestroyed = true;
+
             damagable.TakeDamage(PlayerInventory.Damage);
-            OnDestroed(other.transform);
+            OnDestroed(other.GetComponentInParent<BaseZombie>().transform);
             Destroy(gameObject);
         }
     }

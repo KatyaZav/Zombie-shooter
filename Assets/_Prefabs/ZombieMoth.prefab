@@ -94,6 +94,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2264652197676634477}
   - component: {fileID: 5035373998608012695}
+  - component: {fileID: 6937917073016553125}
+  - component: {fileID: 7126088925839144019}
   m_Layer: 0
   m_Name: body
   m_TagString: Untagged
@@ -168,6 +170,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &6937917073016553125
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165388640704162726}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.342444, y: 4.5170493, z: 2.2418356}
+  m_Center: {x: -0.7483083, y: 0.8854972, z: 0.109303035}
+--- !u!114 &7126088925839144019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165388640704162726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c83fbcf45f13128438be9dbe461dd4bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageCoefficient: 1
 --- !u!1 &1704259459570224398
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,7 +300,6 @@ GameObject:
   - component: {fileID: 2871000526420509548}
   - component: {fileID: 6385098444550618752}
   - component: {fileID: 7503991253066072895}
-  - component: {fileID: 1256916177351419016}
   - component: {fileID: 3303012585930989563}
   - component: {fileID: 6924903815873877206}
   - component: {fileID: 4772721985588323885}
@@ -342,6 +377,8 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   _partsSprites: []
   _size: 0
+  _parts:
+  - {fileID: 7126088925839144019}
   _anim: {fileID: 7503991253066072895}
   _hpSlider: {fileID: 5692275259587631709}
   _maxHealth: 15
@@ -379,27 +416,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!65 &1256916177351419016
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4785629371166460649}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 4.342444, y: 4.5170493, z: 2.2418356}
-  m_Center: {x: -0.7483083, y: 0.8854972, z: 0.109303035}
 --- !u!114 &3303012585930989563
 MonoBehaviour:
   m_ObjectHideFlags: 0
