@@ -9,7 +9,7 @@ public class Bucket : BaseItems
         _zombie.ChangeSpeed(110);
     }
 
-    protected override void OnDestroyd()
+    protected override void OnDestroyed()
     {
         _zombie.ChangeSpeed(10);
         gameObject.SetActive(false);

@@ -7,7 +7,7 @@ public class Sheld : BaseItems
         _zombie.ChangeSpeed(30);
     }
 
-    protected override void OnDestroyd()
+    protected override void OnDestroyed()
     {
         _zombie.ChangeSpeed(130);
         gameObject.SetActive(false);

@@ -26526,19 +26526,19 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.0679412
     - serializedVersion: 3
-      time: 2
-      value: 3
-      inSlope: -0.053971063
-      outSlope: -0.053971063
+      time: 10.082687
+      value: 2.467163
+      inSlope: -0.087053984
+      outSlope: -0.087053984
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.063789845
+      outWeight: 0.07608103
     - serializedVersion: 3
-      time: 100
-      value: 1.5
-      inSlope: -0.015306123
-      outSlope: -0.015306123
+      time: 99.82037
+      value: 0.49545288
+      inSlope: -0.02197193
+      outSlope: -0.02197193
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -26546,8 +26546,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _maxZombieCount: 13
-  _maxMothCount: 2
+  _maxZombieCount: 20
+  _maxMothCount: 1
   _zombies: []
   _left: {fileID: 1217346767}
   _right: {fileID: 1426161766}

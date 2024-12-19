@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider))]
-public abstract class BaseItems : MonoBehaviour
+public abstract class BaseItems : MonoBehaviour, IDamageble
 {
     [SerializeField] protected float _hp;
     [SerializeField, Range(0,10)] protected float _probability;
@@ -24,19 +24,21 @@ public abstract class BaseItems : MonoBehaviour
     } 
 
     protected virtual void OnInit() { }
-    protected virtual void OnDestroyd() { }
+    protected virtual void OnDestroyed() { }
+    protected virtual void OnDamaged() { }
 
-    private void OnTriggerEnter(Collider other)
+    public void TakeDamage(float damage)
     {
-        if (other.gameObject.CompareTag("Bullet"))
-        {
-            _hp -= 1;
+        _hp -= damage;
 
-            if (_hp <= 0 && _isDestroyed == false)
-            {
-                OnDestroyd();
-                _isDestroyed = true;
-            }
+        if (_hp <= 0 && _isDestroyed == false)
+        {
+            OnDestroyed();
+            _isDestroyed = true;
+        }
+        else
+        {
+            OnDamaged();
         }
     }
 }

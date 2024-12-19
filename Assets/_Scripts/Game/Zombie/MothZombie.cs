@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MothZombie : BaseZombie
+public class MothZombie : BaseZombie, IDamageble
 {
     PlayerInventory _inventory;
     //[SerializeField] Sprite _sprite;
@@ -25,14 +25,9 @@ public class MothZombie : BaseZombie
         base.OnDead();
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void TakeDamage(float damage)
     {
-        if (other.gameObject.CompareTag("Bullet"))
-        {
-            //Instantiate(_sprite, other.transform.position, Quaternion.identity);
-            //Debug.Log("Destroy  bulet");
-            Destroy(other.gameObject);
-            RemoveHp(PlayerInventory.Damage);
-        }
+        //PlayerInventory.Damage
+        RemoveHp(damage);
     }
 }

@@ -7,7 +7,7 @@ public class Sword : BaseItems
         _zombie.AddDamage();
     }
 
-    protected override void OnDestroyd()
+    protected override void OnDestroyed()
     {
         _zombie.AddDamage(-1);
         gameObject.SetActive(false);
