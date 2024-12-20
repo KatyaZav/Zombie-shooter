@@ -21,13 +21,13 @@ public class Spawner : MonoBehaviour
     ObjectPool<MothZombie> _mothPool;
     bool wasInit;
 
-    float max = 2;
+    float _minTime = 0.5f;
 
     bool _isStopped = false;
 
     public void AddPoints(int point)
     {
-        _timeInSpawn = _timing.Evaluate(Mathf.Clamp(point, 0, 100)) + max;
+        _timeInSpawn = _timing.Evaluate(Mathf.Clamp(point, 0, 100)) + _minTime;
 
         /*if (point == 0)
         {
@@ -64,13 +64,13 @@ public class Spawner : MonoBehaviour
     public void Init()
     {
         if (PlayerSave.GameCount < 2)
-            max = 4;
+            _minTime = 3.2f;
         else if (PlayerSave.GameCount < 8)
-            max = 2.5f;
+            _minTime = 1.7f;
         else if (PlayerSave.GameCount < 15)
-            max = 1.5f;
+            _minTime = 1f;
         else if (PlayerSave.GameCount < 20)
-            max = 0.5f;
+            _minTime = 0.5f;
 
         _zombiesPool = new ObjectPool<BaseZombie>(_zombiePrefab, _maxZombieCount);
         _mothPool = new ObjectPool<MothZombie>(_flyPrefab, _maxMothCount);
