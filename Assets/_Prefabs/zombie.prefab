@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83fbcf45f13128438be9dbe461dd4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageCoefficient: 3
+  _damageCoefficient: 4
 --- !u!1 &748235586258769458
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,7 +622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83fbcf45f13128438be9dbe461dd4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageCoefficient: 3
+  _damageCoefficient: 4
 --- !u!1 &2451524887088796963
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,7 +742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83fbcf45f13128438be9dbe461dd4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageCoefficient: 1
+  _damageCoefficient: 2
 --- !u!1 &2719638834222229740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,7 +1188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83fbcf45f13128438be9dbe461dd4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageCoefficient: 1
+  _damageCoefficient: 2
 --- !u!1 &6336829994711471105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,7 +1309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83fbcf45f13128438be9dbe461dd4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageCoefficient: 1
+  _damageCoefficient: 2
 --- !u!1 &6519604305117935832
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,7 +1471,7 @@ MonoBehaviour:
   - {fileID: 6927711379356091441}
   _anim: {fileID: 6513098747975550073}
   _hpSlider: {fileID: 8642819519201545}
-  _maxHealth: 50
+  _maxHealth: 40
   _damage: 1
   _items:
   - {fileID: 5579574975436293116}
@@ -2223,4 +2223,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83fbcf45f13128438be9dbe461dd4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageCoefficient: 1
+  _damageCoefficient: 2
