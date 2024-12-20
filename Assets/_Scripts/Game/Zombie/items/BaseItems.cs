@@ -29,16 +29,18 @@ public abstract class BaseItems : MonoBehaviour, IDamageble
 
     public void TakeDamage(float damage)
     {
+        if (_isDestroyed)
+            return;
+
         _hp -= damage;
 
         if (_hp <= 0 && _isDestroyed == false)
         {
             OnDestroyed();
             _isDestroyed = true;
+            gameObject.SetActive(false);
         }
-        else
-        {
-            OnDamaged();
-        }
+        
+        OnDamaged();
     }
 }
