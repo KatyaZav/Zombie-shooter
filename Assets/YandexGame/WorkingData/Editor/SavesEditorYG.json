@@ -1,0 +1,27 @@
+{
+    "idSave": 2,
+    "isFirstSession": false,
+    "language": "ru",
+    "promptDone": false,
+    "money": 1,
+    "newPlayerName": "Hello!",
+    "openLevels": [
+        false,
+        true,
+        false
+    ],
+    "MusicOn": true,
+    "Money": 30,
+    "Record": 0,
+    "Pistol": [
+        0,
+        0,
+        0
+    ],
+    "Abilities": [
+        0,
+        0,
+        0
+    ],
+    "GameCount": 1
+}
