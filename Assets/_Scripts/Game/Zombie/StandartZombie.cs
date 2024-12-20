@@ -27,6 +27,11 @@ public class StandartZombie : BaseZombie
     {
         base.OnDead();
         _killCount++;
+        _anim.SetTrigger("die");
+        _isStop = true;
+        _isDead = true;
+
+        Invoke("DeactivateZombie", 0.5f);
     }
 
     private float ReturnKoef(int killCount)

@@ -18,7 +18,7 @@ public abstract class BaseZombie : MonoBehaviour
 
     [Space(20)]
 
-    [SerializeField] Animator _anim;
+    [SerializeField] protected Animator _anim;
     [SerializeField] HPBar _hpSlider;
     [SerializeField] float _maxHealth;
     [SerializeField] int _damage = 1;
@@ -26,8 +26,8 @@ public abstract class BaseZombie : MonoBehaviour
     bool _wasAttacked = false;
     float _health;
 
-    bool _isDead = false;
-    bool _isStop;
+    protected bool _isDead = false;
+    protected bool _isStop;
 
 
     public void AddPoint()
@@ -104,7 +104,7 @@ public abstract class BaseZombie : MonoBehaviour
     {
         _isDead = true;
         ZombieKilledEvent?.Invoke(_deathCost, this);
-        DeactivateZombie();
+        //DeactivateZombie();
         //_hpSlider.Deactivate();
         //Debug.Log("zombie start dead");
     }
