@@ -124,6 +124,13 @@ public abstract class BaseZombie : MonoBehaviour
 
         if (_health <= 0 && _isDead == false)
             OnDead();
+
+        if (_health > 0)
+            OnDamaged();
+    }
+
+    protected virtual void OnDamaged()
+    {
     }
 
     private void FixedUpdate()

@@ -34,6 +34,22 @@ public class StandartZombie : BaseZombie
         Invoke("DeactivateZombie", 0.5f);
     }
 
+    protected override void OnDamaged()
+    {
+        _anim.SetTrigger("damage");
+
+        if (_isStop == false)
+        {
+            _isStop = true;
+            Invoke("UnFreeze", 0.4f);
+        }
+    }
+
+    private void UnFreeze()
+    {
+        _isStop = false;
+    }
+
     private float ReturnKoef(int killCount)
     {
         var koef = killCount / 6f;
