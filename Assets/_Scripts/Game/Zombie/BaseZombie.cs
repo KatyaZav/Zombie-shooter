@@ -99,6 +99,12 @@ public abstract class BaseZombie : MonoBehaviour
     protected virtual void Move() 
     {
         transform.Translate(transform.forward * Time.deltaTime * _speed * -1);
+
+        if (transform.position.y > 10)
+        {
+            Debug.LogError("Zombie flyied away");
+            RemoveHp(_health);
+        }    
     }
     protected virtual void OnDead() 
     {
