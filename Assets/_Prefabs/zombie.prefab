@@ -312,6 +312,7 @@ MonoBehaviour:
   _hp: 10
   _probability: 2
   _zombie: {fileID: 1614974628415631467}
+  _particle: {fileID: 5846715972533123015, guid: 37834f3b13400a545940f97993620bd1, type: 3}
 --- !u!1 &1390358402956347031
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,6 +435,7 @@ MonoBehaviour:
   _hp: 20
   _probability: 1.5
   _zombie: {fileID: 1614974628415631467}
+  _particle: {fileID: 5846715972533123015, guid: aaaa0c3ce2d05634db9fa8898f24b9a4, type: 3}
 --- !u!1 &1640246188467744522
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,7 +463,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640246188467744522}
   m_LocalRotation: {x: -0, y: -0, z: -0.251838, w: 0.96776944}
-  m_LocalPosition: {x: 2.68, y: 2.71, z: -0.41}
+  m_LocalPosition: {x: 2.68, y: 2.71, z: -0.7}
   m_LocalScale: {x: 1.1466546, y: 1.1466547, z: 1.1466547}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -556,6 +558,7 @@ MonoBehaviour:
   _hp: 5
   _probability: 2.7
   _zombie: {fileID: 1614974628415631467}
+  _particle: {fileID: 5846715972533123015, guid: 620951d16aa88044cbc1be1aaceb99a1, type: 3}
 --- !u!1 &1729587789291297117
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,6 +868,7 @@ MonoBehaviour:
   _hp: 10
   _probability: 3
   _zombie: {fileID: 1614974628415631467}
+  _particle: {fileID: 5846715972533123015, guid: 37834f3b13400a545940f97993620bd1, type: 3}
 --- !u!1 &4284801653318455271
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,7 +1764,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7497673005968327141}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.02, y: -0.1933, z: -0.1}
+  m_LocalPosition: {x: 0.02, y: -0.1933, z: -0.363}
   m_LocalScale: {x: 0.14993334, y: 0.06318206, z: 0.2249}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1855,6 +1859,7 @@ MonoBehaviour:
   _hp: 50
   _probability: 3
   _zombie: {fileID: 1614974628415631467}
+  _particle: {fileID: 5846715972533123015, guid: 329320633a5e2c549b941b6672bfcbee, type: 3}
 --- !u!1 &7644298786566090743
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,6 +2108,7 @@ MonoBehaviour:
   _hp: 20
   _probability: 1.5
   _zombie: {fileID: 1614974628415631467}
+  _particle: {fileID: 5846715972533123015, guid: aaaa0c3ce2d05634db9fa8898f24b9a4, type: 3}
 --- !u!1 &8696462780374844783
 GameObject:
   m_ObjectHideFlags: 0

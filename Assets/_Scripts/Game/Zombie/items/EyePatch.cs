@@ -11,6 +11,7 @@ public class EyePatch :BaseItems
 
     protected override void OnDestroyed()
     {
+        base.OnDestroyed();
         _zombie.ChangeSpeed(120);
         gameObject.SetActive(false);
     }

@@ -9,6 +9,7 @@ public class Sheld : BaseItems
 
     protected override void OnDestroyed()
     {
+        base.OnDestroyed();
         _zombie.ChangeSpeed(130);
         gameObject.SetActive(false);
     }

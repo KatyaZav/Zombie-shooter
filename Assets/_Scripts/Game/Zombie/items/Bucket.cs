@@ -11,6 +11,7 @@ public class Bucket : BaseItems
 
     protected override void OnDestroyed()
     {
+        base.OnDestroyed();
         _zombie.ChangeSpeed(10);
         gameObject.SetActive(false);
     }

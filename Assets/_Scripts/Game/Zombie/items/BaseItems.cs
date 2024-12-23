@@ -6,6 +6,7 @@ public abstract class BaseItems : MonoBehaviour, IDamageble
     [SerializeField] protected float _hp;
     [SerializeField, Range(0,10)] protected float _probability;
     [SerializeField] protected StandartZombie _zombie;
+    [SerializeField] private GameObject _particle;
 
     private bool _isDestroyed = false;
 
@@ -24,7 +25,11 @@ public abstract class BaseItems : MonoBehaviour, IDamageble
     } 
 
     protected virtual void OnInit() { }
-    protected virtual void OnDestroyed() { }
+    protected virtual void OnDestroyed() 
+    {
+        if (_particle != null)
+            Instantiate(_particle, transform.position, transform.rotation);
+    }
     protected virtual void OnDamaged() { }
 
     public void TakeDamage(float damage)
