@@ -29,6 +29,7 @@ public abstract class BaseZombie : MonoBehaviour
     protected bool _isDead = false;
     protected bool _isStop;
 
+    private bool _isBroken = false;
 
     public void AddPoint()
     {
@@ -99,11 +100,13 @@ public abstract class BaseZombie : MonoBehaviour
     protected virtual void Move() 
     {
         transform.Translate(transform.forward * Time.deltaTime * _speed * -1);
-
-        if (transform.position.y > 10)
+        
+        if (transform.position.y > 0)
         {
-            Debug.LogError("Zombie flyied away");
-            RemoveHp(_health);
+            _isBroken = true;
+            //Debug.LogError("Zombie flyied away");
+            transform.position = new Vector3(
+                transform.position.x, 0, transform.position.z);
         }    
     }
     protected virtual void OnDead() 
@@ -119,6 +122,9 @@ public abstract class BaseZombie : MonoBehaviour
     {
         gameObject.SetActive(false);
         gameObject.transform.localPosition = Vector3.zero;
+        
+        if (_isBroken)
+            Destroy(gameObject);
         //Debug.Log("zombie dead");
     }
 
@@ -139,7 +145,7 @@ public abstract class BaseZombie : MonoBehaviour
     {
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (_isDead == true)
             return;
@@ -160,6 +166,9 @@ public abstract class BaseZombie : MonoBehaviour
     {
         gameObject.SetActive(false);
         gameObject.transform.localPosition = Vector3.zero;
+
+        if (_isBroken)
+            Destroy(gameObject);
     }
     private void ChangeColor()
     {

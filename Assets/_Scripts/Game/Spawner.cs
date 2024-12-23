@@ -64,14 +64,14 @@ public class Spawner : MonoBehaviour
     public void Init()
     {
         if (PlayerSave.GameCount < 2)
-            _minTime = 3.2f;
+            _minTime = 2.2f;
         else if (PlayerSave.GameCount < 8)
-            _minTime = 1.7f;
+            _minTime = 1.5f;
         else if (PlayerSave.GameCount < 15)
             _minTime = 1f;
         else if (PlayerSave.GameCount < 20)
             _minTime = 0.5f;
-
+                
         _zombiesPool = new ObjectPool<BaseZombie>(_zombiePrefab, _maxZombieCount);
         _mothPool = new ObjectPool<MothZombie>(_flyPrefab, _maxMothCount);
 
@@ -107,7 +107,7 @@ public class Spawner : MonoBehaviour
 
             if (_isStopped == false)
             {
-                if (Random.Range(0, (int)(400 / _timeInSpawn))  > 4)
+                if (Random.Range(0, (int)(200 / _timeInSpawn))  > 60)
                 {
                     if (_zombiesPool.CanGet())
                         _zombies.Add(ChooseZombie(1));
@@ -147,8 +147,17 @@ public class Spawner : MonoBehaviour
     private void RemoveZombie(int i, BaseZombie zombie)
     {
         //zombie.DeactivateZombie();
-        _zombiesPool.ReturnObject(zombie);
-        _zombies.Remove(zombie);
+
+        if (zombie != null)
+        {
+            _zombiesPool.ReturnObject(zombie);
+            _zombies.Remove(zombie);
+        }
+        else
+        {
+            _zombies.Remove(null);
+            Debug.LogError("getted broken");
+        }
     }
 
     private float GenerateRandomXPosition()

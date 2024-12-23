@@ -33664,7 +33664,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -134.82, y: -136.23999}
+  m_AnchoredPosition: {x: -134.82007, y: -136.23999}
   m_SizeDelta: {x: 219.66, y: 202.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1354117687
@@ -36251,7 +36251,7 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 2
+      value: 1.5
       inSlope: -0.15240741
       outSlope: -0.15240741
       tangentMode: 0
@@ -36260,13 +36260,49 @@ MonoBehaviour:
       outWeight: 0.0679412
     - serializedVersion: 3
       time: 15
-      value: 1
-      inSlope: -0.020645333
-      outSlope: -0.020645333
+      value: 0.5
+      inSlope: -0.016687693
+      outSlope: -0.016687693
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.56188387
-      outWeight: 0.07011683
+      outWeight: 0.110342085
+    - serializedVersion: 3
+      time: 30
+      value: 0.8
+      inSlope: 0.006286762
+      outSlope: 0.006286762
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 45
+      value: 0.5
+      inSlope: 0.002959718
+      outSlope: 0.002959718
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 55
+      value: 0.8
+      inSlope: 0.006226256
+      outSlope: 0.006226256
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 65
+      value: 0.5
+      inSlope: -0.0015686024
+      outSlope: -0.0015686024
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 99.82037
       value: 0.49545288
@@ -36287,7 +36323,7 @@ MonoBehaviour:
   _zombiePrefab: {fileID: 6519604305117935832, guid: 1c52af593484a8643a7e22ff6486b16e, type: 3}
   _flyPrefab: {fileID: 4785629371166460649, guid: 389ddd5222783af4aba638bcdb4e460b, type: 3}
   _inventory: {fileID: 1853635734}
-  _timeInSpawn: 4
+  _timeInSpawn: 0.5
   _maxScore: 25
 --- !u!114 &1758722128
 MonoBehaviour:
