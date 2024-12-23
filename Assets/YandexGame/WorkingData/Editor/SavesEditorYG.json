@@ -1,5 +1,5 @@
 {
-    "idSave": 96,
+    "idSave": 154,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -10,8 +10,9 @@
         true,
         false
     ],
+    "SoundOn": true,
     "MusicOn": true,
-    "Money": -1984,
+    "Money": -1976,
     "Record": 47,
     "Pistol": [
         5,
@@ -23,5 +24,5 @@
         8,
         8
     ],
-    "GameCount": 7
+    "GameCount": 14
 }

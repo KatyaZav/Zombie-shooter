@@ -5,6 +5,7 @@ using TMPro;
 public class BootstrapMenu : MonoBehaviour
 {
     [SerializeField] AudioUpdater _audio;
+    [SerializeField] MusicUpdater _musAudio;
     [SerializeField] CoinHolder _coin;
 
     [SerializeField] ShopPart[] _weapon;
@@ -45,6 +46,7 @@ public class BootstrapMenu : MonoBehaviour
         Cursor.visible = false;
 
         _audio.Init();
+        _musAudio.Init();
         _coin.Init();
 
         var i = 0;

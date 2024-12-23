@@ -5,6 +5,7 @@ public class PlayerSave
 {
     public static int Money => YandexGame.savesData.Money;
     public static int Record => YandexGame.savesData.Record;
+    public static bool SoundOn => YandexGame.savesData.SoundOn;
     public static bool MusicOn => YandexGame.savesData.MusicOn;
     public static int[] Pistol => YandexGame.savesData.Pistol;
     public static int[] Abilities => YandexGame.savesData.Abilities;
@@ -45,7 +46,13 @@ public class PlayerSave
 
     public static void SetMusicOn(bool isOn)
     {
-        YandexGame.savesData.MusicOn = isOn;
+        YandexGame.savesData.SoundOn = isOn;
+        YandexGame.SaveProgress();
+    }
+
+    public static void SwipeSoundOn()
+    {
+        YandexGame.savesData.SoundOn = !YandexGame.savesData.SoundOn;
         YandexGame.SaveProgress();
     }
 

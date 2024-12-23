@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 [RequireComponent(typeof(AudioSource))]
 public class AudioComponent : MonoBehaviour
 {    
     private AudioSource _sorce;
     private bool wasInit = false;
+
+    //[SerializeField] private AudioMixerGroup _mixerGroup;
 
     public void ChangePitch()
     {
@@ -42,6 +45,7 @@ public class AudioComponent : MonoBehaviour
 
         OnValidate();
         wasInit = true;
+        //_sorce.outputAudioMixerGroup = _mixerGroup;
     }
 
     private void OnValidate()
