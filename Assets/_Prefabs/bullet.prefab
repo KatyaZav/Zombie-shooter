@@ -104,7 +104,7 @@ MonoBehaviour:
   wasGetted: 0
   _rb: {fileID: 2625304890600867520}
   _speed: 30
-  _sprite: {fileID: 6216689663042714609, guid: e255492194fa36a4ba380bfa48d99fed, type: 3}
+  _sprite: {fileID: 8954805327642370691, guid: c49f82ff405a527419673f7dc8fc250b, type: 3}
   _destroyTime: 0.3
 --- !u!54 &2625304890600867520
 Rigidbody:
