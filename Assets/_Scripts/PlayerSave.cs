@@ -1,16 +1,29 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using YG;
 
 public class PlayerSave
 {
+    private const string SoundMixerName = "Sound";
+    private const string MusicMixerName = "Music";
+
+    private static AudioMixer _audioMixerGroup;
+
     public static int Money => YandexGame.savesData.Money;
     public static int Record => YandexGame.savesData.Record;
-    public static bool SoundOn => YandexGame.savesData.SoundOn;
-    public static bool MusicOn => YandexGame.savesData.MusicOn;
+    public static bool SoundOn => YandexGame.savesData.IsSoundOn;
+    public static bool MusicOn => YandexGame.savesData.IsMusicOn;
     public static int[] Pistol => YandexGame.savesData.Pistol;
     public static int[] Abilities => YandexGame.savesData.Abilities;
     public static string Language => YandexGame.lang;
     public static int GameCount => YandexGame.savesData.GameCount;
+    public static bool IsInit {  get; private set; }
+
+    public static void Init(AudioMixer audioMixerGroup)
+    {
+        _audioMixerGroup = audioMixerGroup;
+        IsInit = true;
+    }
 
     public static void GetMinAndMax(out float a, out float b)
     {
@@ -46,19 +59,25 @@ public class PlayerSave
 
     public static void SetMusicOn(bool isOn)
     {
-        YandexGame.savesData.SoundOn = isOn;
+        YandexGame.savesData.IsSoundOn = isOn;
         YandexGame.SaveProgress();
     }
 
     public static void SwipeSoundOn()
     {
-        YandexGame.savesData.SoundOn = !YandexGame.savesData.SoundOn;
+        YandexGame.savesData.IsSoundOn = !YandexGame.savesData.IsSoundOn;
+
+        _audioMixerGroup.SetFloat(SoundMixerName, PlayerSave.SoundOn ? 0f : -80f);
+
         YandexGame.SaveProgress();
     }
 
     public static void SwipeMusicOn()
     {
-        YandexGame.savesData.MusicOn = !YandexGame.savesData.MusicOn;
+        YandexGame.savesData.IsMusicOn = !YandexGame.savesData.IsMusicOn;
+
+        _audioMixerGroup.SetFloat(MusicMixerName, PlayerSave.MusicOn ? 0f : -80f);
+
         YandexGame.SaveProgress();
     }
 

@@ -5,13 +5,10 @@ using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class MusicUpdater : MonoBehaviour
-{
-    private const string MixerName = "Music";
-    
+{    
     [SerializeField] Button _button;
     [SerializeField] Image[] _image;
     [SerializeField] Sprite[] sprites;
-    [SerializeField] private AudioMixer _mixer;
 
     public void Init()
     {
@@ -34,7 +31,5 @@ public class MusicUpdater : MonoBehaviour
         else
             foreach (var image in _image)
                 image.sprite = sprites[1];
-
-        _mixer.SetFloat(MixerName, PlayerSave.MusicOn ? 0f : -80f);
     }
 }

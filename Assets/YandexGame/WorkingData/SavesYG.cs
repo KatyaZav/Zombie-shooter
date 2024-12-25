@@ -18,8 +18,8 @@ namespace YG
 
         // Ваши сохранения
 
-        public bool SoundOn = true;
-        public bool MusicOn = true;
+        public bool IsSoundOn = true;
+        public bool IsMusicOn = true;
         public int Money = 30;
         public int Record = 0;
 

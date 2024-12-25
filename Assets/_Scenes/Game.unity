@@ -33368,6 +33368,7 @@ MonoBehaviour:
   _spawner: {fileID: 1758722127}
   _audio: {fileID: 1232449134}
   _start: {fileID: 8300000, guid: ea2763d7fc1063e468ba58bb7b169bc9, type: 3}
+  _audioMixer: {fileID: 24100000, guid: fa2688fd9c188c34ebb84eabce22560d, type: 2}
 --- !u!4 &1232449133
 Transform:
   m_ObjectHideFlags: 0

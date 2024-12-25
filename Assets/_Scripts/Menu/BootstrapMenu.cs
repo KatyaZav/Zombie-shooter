@@ -1,6 +1,7 @@
 using UnityEngine;
 using YG;
 using TMPro;
+using UnityEngine.Audio;
 
 public class BootstrapMenu : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class BootstrapMenu : MonoBehaviour
     //[SerializeField] AddIcons _icon;
 
     [SerializeField] private int _buildVersion;
+
+    [SerializeField] private AudioMixer _mixer;
 
     void Start()
     {
@@ -78,6 +81,11 @@ public class BootstrapMenu : MonoBehaviour
         if (PlayerSave.GameCount >= 2)
         {
             left.SetActive(true);
+        }
+
+        if (PlayerSave.IsInit == false)
+        {
+            PlayerSave.Init(_mixer);
         }
     }
 }

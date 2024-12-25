@@ -22,6 +22,7 @@ namespace YG
         {
             //if (notSupported) notSupported.SetActive(false);
             //if (done) done.SetActive(false);
+
             showDialog.SetActive(false);
         }
 
