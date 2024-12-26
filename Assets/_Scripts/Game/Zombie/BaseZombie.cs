@@ -113,6 +113,7 @@ public abstract class BaseZombie : MonoBehaviour
     {
         _isDead = true;
         ZombieKilledEvent?.Invoke(_deathCost, this);
+
         //DeactivateZombie();
         //_hpSlider.Deactivate();
         //Debug.Log("zombie start dead");
@@ -123,8 +124,6 @@ public abstract class BaseZombie : MonoBehaviour
         gameObject.SetActive(false);
         gameObject.transform.localPosition = Vector3.zero;
         
-        if (_isBroken)
-            Destroy(gameObject);
         //Debug.Log("zombie dead");
     }
 
@@ -176,7 +175,8 @@ public abstract class BaseZombie : MonoBehaviour
 
         foreach (var e in _partsSprites)
         {
-            e.color = color;
+            if (e != null)
+                e.color = color;
         }
     }
     private void ChangeSize()

@@ -148,7 +148,7 @@ public class Spawner : MonoBehaviour
     {
         //zombie.DeactivateZombie();
 
-        if (zombie != null)
+        if (zombie.gameObject != null)
         {
             _zombiesPool.ReturnObject(zombie);
             _zombies.Remove(zombie);
